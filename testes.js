@@ -1,7 +1,12 @@
-//var agora = new Date()
-var diaSem = 'Sabado'
 
-//console.log(diaSem)
+/* Tentar utilizar o "case" no projeto para nao ficar em "else if" infinitos 
+Pegar o resultado de uma variavel, provavelmente utilizando document e declarando a variavel
+e nisso passar no case para retornar a lista de ensaios, PORÉM, preciso arrumar um jeito para que na variavel
+a pessoa possa digitar de formas diferentes na caixa de texto e não algo em especifico, mas nao sei se o CASE
+permite o uso de varios paramentros de comparação*/
+
+
+var diaSem = 'Sabado'
 
 switch(diaSem) {
     
