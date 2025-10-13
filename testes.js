@@ -6,7 +6,7 @@ a pessoa possa digitar de formas diferentes na caixa de texto e não algo em esp
 permite o uso de varios paramentros de comparação*/
 
 
-var diaSem = 'Sabado'
+var diaSem = '1 Sexta'
 
 switch(diaSem) {
     
@@ -25,8 +25,8 @@ switch(diaSem) {
         case 'Quinta':
         console.log('Quinta')
             break
-        case 'Sexta':
-        console.log('Sexta')
+        case '1 Sexta':
+        console.log("Jd.Liberdade,\nJd.Nova Aliança (SDI)")
             break
         case 'Sabado':
         console.log('Sabado')
