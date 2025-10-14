@@ -1,0 +1,54 @@
+        /* ====== BODY ====== */
+        body {
+            margin: 0; /* Remove a margem padrão do navegador */
+            font-family: Verdana; /* Fonte padrão da página — você pode trocar para 'Verdana', 'Helvetica', etc. */
+            text-align: center; /* Centraliza o conteúdo horizontalmente */
+            background-color: #fff; /* Cor de fundo da página — pode alterar para #f0f0f0 ou outra cor */
+            padding-top: 5px; /* 🔧 Espaço entre o topo da página e o título h1. Aumente para afastar mais */
+        }
+        
+        /* ====== TÍTULO ====== */
+        h1 {
+            margin-bottom: 20px; /* 🔧 Espaço entre o título e a logo. Alterar para aumentar/diminuir distância */
+            color: #033D60; /* Cor do título. Pode colocar qualquer hexadecimal (#ff0000), rgb ou nome de cor */
+        }
+        
+        /* ====== LOGO ====== */
+        .logo-fundo {
+            display: block; /* Faz a logo se comportar como bloco, permitindo margin centralizada */
+            margin: 0 auto 25px auto; /* 🔧 Centraliza horizontalmente e adiciona espaço embaixo */
+            width: 180px; /* 🔧 Tamanho da logo. Alterar para aumentar ou diminuir a imagem */
+            opacity: 1; /* 🔧 Transparência da logo. 1 = opaco, 0.5 = semi-transparente */
+        }
+        
+        /* ====== INPUTS E BOTÃO ====== */
+        input[type="text"] {
+            padding: 1px; /* Espaçamento interno do campo de texto. Aumente para deixar maior */
+            font-size: 16px; /* Tamanho da fonte no input. Pode aumentar para 18px, 20px etc */
+        }
+        
+        input[type="button"] {
+            padding: 1px; /* Espaçamento interno do botão. Alterar para aumentar o tamanho */
+            font-size: 15px; /* Tamanho da fonte do botão */
+            cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
+            margin-left: 5px; /* Espaço à esquerda do botão. Alterar para ajustar posição */
+        }
+        
+        /* ====== RESULTADO ====== */
+        #res {
+            margin-top: 20px; /* 🔧 Espaço entre o input/botão e os resultados exibidos */
+            font-size: 18px; /* Tamanho do texto do resultado */
+            line-height: 1.5; /* Altura da linha, útil para melhorar a leitura */
+        }
+        footer {
+            position: fixed;   /* fixa o rodapé na tela */
+            bottom: 0;         /* cola na parte de baixo */
+            left: 0;           /* alinha à esquerda */
+            width: 100%;       /* ocupa toda a largura da tela */
+            background-color: #ececec;  /* cor de fundo */
+            color: #555;       /* cor do texto */
+            text-align: center; /* centraliza o texto */
+            padding: 5px;       /* espaço interno pequeno */
+            font-size: 11px;    /* texto pequeno */
+            border-top: 1px solid #ccc; /* linha em cima (opcional) */
+        }
