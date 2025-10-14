@@ -3,7 +3,7 @@
 <h  ead>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Ensaio CCB - Maringá e Regigão</title>
+      <title>Ensaio CCB - Maringá e Região</title>
     
       
       <style>
@@ -18,14 +18,14 @@
         
         /* ====== TÍTULO ====== */
         h1 {
-            margin-bottom: 10px; /* 🔧 Espaço entre o título e a logo. Alterar para aumentar/diminuir distância */
+            margin-bottom: 20px; /* 🔧 Espaço entre o título e a logo. Alterar para aumentar/diminuir distância */
             color: #033D60; /* Cor do título. Pode colocar qualquer hexadecimal (#ff0000), rgb ou nome de cor */
         }
         
         /* ====== LOGO ====== */
         .logo-fundo {
             display: block; /* Faz a logo se comportar como bloco, permitindo margin centralizada */
-            margin: 0 auto 20px auto; /* 🔧 Centraliza horizontalmente e adiciona espaço embaixo */
+            margin: 0 auto 25px auto; /* 🔧 Centraliza horizontalmente e adiciona espaço embaixo */
             width: 180px; /* 🔧 Tamanho da logo. Alterar para aumentar ou diminuir a imagem */
             opacity: 1; /* 🔧 Transparência da logo. 1 = opaco, 0.5 = semi-transparente */
         }
@@ -49,20 +49,36 @@
             font-size: 18px; /* Tamanho do texto do resultado */
             line-height: 1.5; /* Altura da linha, útil para melhorar a leitura */
         }
+        footer {
+            position: fixed;   /* fixa o rodapé na tela */
+            bottom: 0;         /* cola na parte de baixo */
+            left: 0;           /* alinha à esquerda */
+            width: 100%;       /* ocupa toda a largura da tela */
+            background-color: #ececec;  /* cor de fundo */
+            color: #555;       /* cor do texto */
+            text-align: center; /* centraliza o texto */
+            padding: 5px;       /* espaço interno pequeno */
+            font-size: 11px;    /* texto pequeno */
+            border-top: 1px solid #ccc; /* linha em cima (opcional) */
+        }
         
-    
     </style>
 </head>
 <body>
     <h1>Ensaio Musical em Maringá e Região</h1>
     <img class="logo-fundo" src="logo_oficial_CCB.png" alt="Logo">
 
-    <p>Digite abaixo qual o dia da semana: ("1 Segunda, 3 Sexta, Ultima Segunda, etc.")</p> <p> <input type="text" name="diaSem" id="dia"> 
-    <input type="button" value="Buscar" onclick="procurar()">
+    <p>Digite abaixo qual o dia da semana: ("Ex: 1 Segunda, 3 Sexta, Ultima Segunda, etc.")</p> <p> <input type="text" name="diaSem" placeholder="Digite aqui..." id="dia"> 
+    <input type="button" value="Buscar" onclick="procurar()"> 
     </p>
     
     <div id="res" ></div>
     <div class="container" id="img-container"></div>
+
+    <footer>
+        <p>Nota: Este não é um site oficial da Congregação Cristã do Brasil.</p>
+        <p>© 2025 - Feito por Vitor Huçulak</p>
+    </footer>
     
 
     <script>
