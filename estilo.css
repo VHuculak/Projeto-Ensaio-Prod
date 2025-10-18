@@ -5,6 +5,10 @@
             text-align: center; /* Centraliza o conteúdo horizontalmente */
             background-color: #ffffff; /* Cor de fundo da página — pode alterar para #f0f0f0 ou outra cor */
             padding-top: 5px; /* 🔧 Espaço entre o topo da página e o título h1. Aumente para afastar mais */
+
+            display: flex;
+    flex-direction: column;
+    min-height: 100%;  /* Faz o body ocupar a tela inteira */
         }
         
         /* ====== TÍTULO ====== */
