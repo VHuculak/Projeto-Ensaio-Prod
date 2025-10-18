@@ -20,7 +20,7 @@
         } else if (b == '4 sexta' || b == 'quarta sexta') {
             res.innerHTML = `<p><strong>4ª Sexta - Hora: 19:30</strong></p>
                              <p>Conj. Requião<br>Conj. Giacomo Colombari (MVA)<br>Vale Azul (SDI)<br>Guaraci (JTÃ)<br>Floriano - Central</p>`;  
-        } else if (b == 'ultima sexta') {
+        } else if (b == 'ultima sexta'|| b == 'última sexta') {
             res.innerHTML = `<p><strong>Última Sexta - Hora: 19:30</strong></p>
                              <p>Vila Morangueira<br>Jd. Continental (Os ensaios serão na igreja Pq. Hortência)<br>Vila Santa Isabel<br>Jd. Esperança (SDI)<br>Floresta - Central<br>Ourizona - Central<br>Prado Ferreira (JTÃ)</p>`;  
         } else if (b == '3 domingo' || busca == 'terceiro domingo' || b == 'domingo') {
@@ -35,7 +35,7 @@
         } else if (b == '4 segunda' || b == 'quarta segunda') {
             res.innerHTML = `<p><strong>4ª Segunda - Hora: 19:30</strong></p>
                              <p>Maringá - Central<br>Jd. Oriental (Antigo Diamante)<br>Jd. Alvorada<br>Iguatemi<br>Pq. Alvamar (SDI)<br>Jd. Bela Vista (PDU)</p>`;  
-        } else if (b == 'ultima segunda') {
+        } else if (b == 'ultima segunda'|| b == 'última segunda') {
             res.innerHTML = `<p><strong>Última Segunda - Hora: 19:30</strong></p>
                              <p>Jd. Universo<br>Pq. Das Laranjeiras<br>Ivatuba - Central<br>Itambé - Central<br>Jd. Independencia 3°Parte (SDI)<br>São Luiz (MVA)</p>`;  
         } else {

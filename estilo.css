@@ -3,7 +3,7 @@
             margin: 0; /* Remove a margem padrão do navegador */
             font-family: Verdana; /* Fonte padrão da página — você pode trocar para 'Verdana', 'Helvetica', etc. */
             text-align: center; /* Centraliza o conteúdo horizontalmente */
-            background-color: #fff; /* Cor de fundo da página — pode alterar para #f0f0f0 ou outra cor */
+            background-color: #ffffff; /* Cor de fundo da página — pode alterar para #f0f0f0 ou outra cor */
             padding-top: 5px; /* 🔧 Espaço entre o topo da página e o título h1. Aumente para afastar mais */
         }
         
@@ -25,6 +25,8 @@
         input[type="text"] {
             padding: 1px; /* Espaçamento interno do campo de texto. Aumente para deixar maior */
             font-size: 16px; /* Tamanho da fonte no input. Pode aumentar para 18px, 20px etc */
+            border: auto;
+            
         }
         
         input[type="button"] {
@@ -32,14 +34,46 @@
             font-size: 15px; /* Tamanho da fonte do botão */
             cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
             margin-left: 5px; /* Espaço à esquerda do botão. Alterar para ajustar posição */
+            text-align: center
         }
         
         /* ====== RESULTADO ====== */
         #res {
             margin-top: 20px; /* 🔧 Espaço entre o input/botão e os resultados exibidos */
             font-size: 18px; /* Tamanho do texto do resultado */
-            line-height: 1.5; /* Altura da linha, útil para melhorar a leitura */
+            line-height: 1.6; /* Altura da linha, útil para melhorar a leitura */
+            text-align: center;
         }
+
+        
+        header {
+            background-color: #ececec;
+            width: 735px;
+            margin: auto;
+            padding: 2px;
+            border-radius: 15px;
+            border: 1px solid #5a5a5a3d;
+            text-align: center;
+        }
+
+        section {
+            background-color: #ececec;
+            border-radius: 20px;
+            padding: 5px; /* tamanho entre a borda da caixa e o texto interno */
+            width: 735px;  /*  Tamanho lateral da caixa (largura) */
+            margin: auto;
+            margin-top: 30px;
+
+            border: 1px solid #5a5a5a3d;
+            
+
+        }
+
+        div {
+            text-align:  center;
+            padding: auto;
+        }
+
         footer {
             position: fixed;   /* fixa o rodapé na tela */
             bottom: 0;         /* cola na parte de baixo */
