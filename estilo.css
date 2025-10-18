@@ -79,8 +79,8 @@
         }
 
         footer {
-            position: relative;   /* fixa o rodapé na tela */
-            bottom: auto;         /* cola na parte de baixo */
+            position: fixed;   /* fixa o rodapé na tela */
+            bottom: 0;         /* cola na parte de baixo */
             left: 0;           /* alinha à esquerda */
             width: 100%;       /* ocupa toda a largura da tela */
             background-color: #ececec;  /* cor de fundo */
