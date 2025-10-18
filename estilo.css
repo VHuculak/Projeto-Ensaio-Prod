@@ -65,8 +65,8 @@
             width: 90%;  /*  Tamanho lateral da caixa (largura) */
             max-width: 735px;
             margin: auto;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 40px;
+            
 
             border: 1px solid #5a5a5a3d;
 
@@ -91,7 +91,7 @@
             padding: 5px;       /* espaço interno pequeno */
             font-size: 11px;    /* texto pequeno */
             border-top: 1px solid #ccc; /* linha em cima (opcional) */
-
             margin-top: 40px;
+            
             
         }
