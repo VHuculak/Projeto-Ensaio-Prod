@@ -48,7 +48,8 @@
         
         header {
             background-color: #ececec;
-            width: 735px;
+            width: 90%;
+            max-width: 735px;
             margin: auto;
             padding: 2px;
             border-radius: 15px;
@@ -60,7 +61,8 @@
             background-color: #ececec;
             border-radius: 20px;
             padding: 5px; /* tamanho entre a borda da caixa e o texto interno */
-            width: 735px;  /*  Tamanho lateral da caixa (largura) */
+            width: 90%;  /*  Tamanho lateral da caixa (largura) */
+            max-width: 735px;
             margin: auto;
             margin-top: 30px;
 
