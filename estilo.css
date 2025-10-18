@@ -65,9 +65,10 @@
             max-width: 735px;
             margin: auto;
             margin-top: 30px;
-            margin-bottom: 30px;
 
             border: 1px solid #5a5a5a3d;
+
+            
             
 
         }
@@ -78,8 +79,8 @@
         }
 
         footer {
-            position: fixed;   /* fixa o rodapé na tela */
-            bottom: 0;         /* cola na parte de baixo */
+            position: relative;   /* fixa o rodapé na tela */
+            bottom: auto;         /* cola na parte de baixo */
             left: 0;           /* alinha à esquerda */
             width: 100%;       /* ocupa toda a largura da tela */
             background-color: #ececec;  /* cor de fundo */
@@ -88,4 +89,7 @@
             padding: 5px;       /* espaço interno pequeno */
             font-size: 11px;    /* texto pequeno */
             border-top: 1px solid #ccc; /* linha em cima (opcional) */
+
+            margin-top: 40px;
+            
         }
