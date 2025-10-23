@@ -46,8 +46,6 @@
             font-size: 18px; /* Tamanho do texto do resultado */
             line-height: 1.6; /* Altura da linha, útil para melhorar a leitura */
             
-            
-            
         }
 
         
@@ -71,13 +69,8 @@
             max-width: 735px;
             margin: auto;
             margin-top: 40px;
-            
-
             border: 1px solid #5a5a5a3d;
-}
-
-
-       
+        }
 
         div {
             text-align:  center;
@@ -96,6 +89,5 @@
             font-size: 11px;    /* texto pequeno */
             border-top: 1px solid #ccc; /* linha em cima (opcional) */
             margin-top: 40px;
-            
             
         }
