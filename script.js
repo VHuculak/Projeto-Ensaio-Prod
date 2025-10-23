@@ -1,9 +1,9 @@
 
     function procurar() {
         var busca = document.getElementById('dia').value 
-        var resultado = document.querySelector('div#res')
+        var res = document.querySelector('div#res')
         var b = busca.toLowerCase()
-
+        
 
             //alterar o IF usando a var B e criar apenas 2 = '1 sexta' e 'primeira sexta' em todos
             //o toLowerCase vai pegar e entrada do user e vai transoformar tudo em minuscula.
@@ -42,6 +42,8 @@
             res.innerHTML = `<p><strong>Não tem ensaio este dia</strong></p>`;
         }
 
+   
+}
         
-    }
+    
     console.log('by: Vitor Huçulak, 2025')

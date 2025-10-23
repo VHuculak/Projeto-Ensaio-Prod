@@ -40,10 +40,14 @@
         
         /* ====== RESULTADO ====== */
         #res {
+            
+            text-align: center;
             margin-top: 20px; /* 🔧 Espaço entre o input/botão e os resultados exibidos */
             font-size: 18px; /* Tamanho do texto do resultado */
             line-height: 1.6; /* Altura da linha, útil para melhorar a leitura */
-            text-align: center;
+            
+            
+            
         }
 
         
@@ -59,6 +63,7 @@
         }
 
         section {
+            
             background-color: #ececec;
             border-radius: 20px;
             padding: 5px; /* tamanho entre a borda da caixa e o texto interno */
@@ -69,11 +74,10 @@
             
 
             border: 1px solid #5a5a5a3d;
+}
 
-            
-            
 
-        }
+       
 
         div {
             text-align:  center;
