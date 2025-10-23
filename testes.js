@@ -5,6 +5,11 @@ e nisso passar no case para retornar a lista de ensaios, PORÉM, preciso arrumar
 a pessoa possa digitar de formas diferentes na caixa de texto e não algo em especifico, mas nao sei se o CASE
 permite o uso de varios paramentros de comparação*/
 
+/*Notas para a pesquisa:
+O Brake conseguiri ser usado, porém, ele nao atende para varias pesquisas variadas com caracteres diferentes, ou seja, ao pesquisar
+"1 segunda" não existe a possibilidade de criar variações como "primeira segunda", para estas pesquisas mais amplas, deve-se usar o
+IF/ELSE e colocar todas as variantes que deseja, criando o mesmo cenario.
+*/
 
 var diaSem = '1 Sexta'
 

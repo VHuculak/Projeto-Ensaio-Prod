@@ -38,7 +38,11 @@
         } else if (b == 'ultima segunda'|| b == 'última segunda') {
             res.innerHTML = `<p><strong>Última Segunda - Hora: 19:30</strong></p>
                              <p>Jd. Universo<br>Pq. Das Laranjeiras<br>Ivatuba - Central<br>Itambé - Central<br>Jd. Independencia 3°Parte (SDI)<br>São Luiz (MVA)</p>`;  
-        } else {
+        } /* else if (b == '') {
+            res.innerHTML = `<p><strong>RULFRULF</strong></p>`
+        } Adicionar uma busca geral, ao clicar em "buscar" vai puxar todos os ensaios da região */ 
+        
+        else {
             res.innerHTML = `<p><strong>Não tem ensaio este dia</strong></p>`;
         }
 
