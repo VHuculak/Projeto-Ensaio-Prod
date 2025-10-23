@@ -37,16 +37,6 @@
             margin-left: 5px; /* Espaço à esquerda do botão. Alterar para ajustar posição */
             text-align: center
         }
-        
-        /* ====== RESULTADO ====== */
-        #res {
-            
-            text-align: center;
-            margin-top: 20px; /* 🔧 Espaço entre o input/botão e os resultados exibidos */
-            font-size: 18px; /* Tamanho do texto do resultado */
-            line-height: 1.6; /* Altura da linha, útil para melhorar a leitura */
-            
-        }
 
         
         header {
@@ -60,12 +50,22 @@
             text-align: center;
         }
 
+          /* ====== RESULTADO ====== */
+        #res {
+            
+            text-align: center;
+            margin-top: 20px; /* 🔧 Espaço entre o input/botão e os resultados exibidos */
+            font-size: 18px; /* Tamanho do texto do resultado */
+            line-height: 1.6; /* Altura da linha, útil para melhorar a leitura */
+            
+        }
+
         section {
             
             background-color: #ececec;
             border-radius: 20px;
             padding: 5px; /* tamanho entre a borda da caixa e o texto interno */
-            width: 90%;  /*  Tamanho lateral da caixa (largura) */
+            width: 80%;  /*  Tamanho lateral da caixa (largura) */
             max-width: 735px;
             margin: auto;
             margin-top: 40px;
