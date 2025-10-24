@@ -1,5 +1,5 @@
 /* ================================================= */
-/* ARQUIVO CSS FINAL (COM ESTRATÉGIA DUPLA)          */
+/* ARQUIVO CSS FINAL (COM ESTRATÉGIA DUPLA CORRETA)  */
 /* ================================================= */
 
 /* ====== GERAL ====== */
@@ -15,7 +15,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Para o PC, a página sempre tenta ocupar a tela inteira. */
     margin: 0;
     font-family: Verdana;
     text-align: center;
@@ -63,32 +63,57 @@ footer {
 }
 
 /* ====== TÍTULOS, INPUTS, ETC. ====== */
-h1 { margin-top: 0; margin-bottom: 20px; color: #033D60; font-size: 1.8em; }
-.logo-fundo { display: block; margin: 0 auto 25px auto; width: 180px; }
-input[type="text"] { padding: 1px; font-size: 16px; border: auto; }
-input[type="button"] { padding: 1px; font-size: 15px; cursor: pointer; margin-left: 5px; text-align: center; }
-#res { text-align: center; margin-top: 20px; font-size: 18px; line-height: 1.6; }
+h1 { 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    color: #033D60; 
+    font-size: 1.8em; 
+}
+.logo-fundo { 
+    display: block; 
+    margin: 0 auto 25px auto; 
+    width: 180px; 
+}
+input[type="text"] { 
+    padding: 1px; 
+    font-size: 16px; 
+    border: auto; 
+}
+input[type="button"] { 
+    padding: 1px; 
+    font-size: 15px; 
+    cursor: pointer; 
+    margin-left: 5px; 
+    text-align: center; 
+}
+#res { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 18px; 
+    line-height: 1.6; 
+}
 
 /* ======================================================== */
-/* ====== MUDANÇA DE LÓGICA PARA TELAS PEQUENAS ====== */
+/* ====== MUDANÇA DE ESTRATÉGIA PARA TELAS PEQUENAS ====== */
 /* ======================================================== */
 @media (max-width: 768px) {
     
     /* No celular, mudamos a lógica para um layout simples, onde o rodapé não é empurrado para baixo. */
 
-    header {
-        margin-bottom: 25px;
-    }
-
-    section {
-        /* No celular, a 'section' não precisa de margem embaixo, pois o footer terá no topo. */
-        margin-bottom: 0;
+    body {
+        /* AVISAMOS A PÁGINA PARA NÃO TENTAR MAIS PREENCHER A TELA INTEIRA.
+           Ela agora terá a altura que o conteúdo precisar. */
+        min-height: auto;
     }
 
     footer {
-        /* AQUI ESTÁ A MUDANÇA-CHAVE PARA O CELULAR:
-           Nós DESLIGAMOS a regra 'margin-top: auto' (que cria o espaço gigante)
-           e a substituímos por uma margem fixa e normal. */
+        /* DESLIGAMOS a regra que empurra o rodapé para baixo
+           e a substituímos por um espaçamento normal e fixo. */
         margin-top: 40px;
+    }
+
+    /* Reduzimos o espaço entre header e section para um visual mais compacto */
+    header {
+        margin-bottom: 25px;
     }
 }
