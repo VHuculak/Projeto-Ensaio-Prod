@@ -1,8 +1,8 @@
 /* ================================================= */
-/* ARQUIVO CSS FINAL (COM CORREÇÃO DEFINITIVA)       */
+/* ARQUIVO CSS FINAL (COM ESTRATÉGIA DUPLA)          */
 /* ================================================= */
 
-/* ====== GERAL E CORREÇÃO DE ROLAGEM ====== */
+/* ====== GERAL ====== */
 html {
     box-sizing: border-box;
     height: 100%;
@@ -33,7 +33,7 @@ header {
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
     text-align: center;
-    margin-bottom: 40px; /* Distância padrão para PC */
+    margin-bottom: 40px;
 }
 
 /* ====== SECTION (CAIXA DE RESULTADO) ====== */
@@ -44,12 +44,13 @@ section {
     width: 95%;
     max-width: 735px;
     border: 1px solid #5a5a5a3d;
-    margin-bottom: 40px; /* Distância padrão para PC */
+    /* A margem de baixo aqui serve para quando o conteúdo é LONGO e precisa de scroll. */
+    margin-bottom: 40px;
 }
 
 /* ====== FOOTER (RODAPÉ) ====== */
 footer {
-    /* Esta regra está correta para todas as telas. Ela empurra o rodapé para baixo. */
+    /* ESTA É A LÓGICA PARA O PC: Empurra o rodapé para a base da tela. */
     margin-top: auto;
     
     width: 100%;
@@ -61,61 +62,33 @@ footer {
     border-top: 1px solid #ccc;
 }
 
+/* ====== TÍTULOS, INPUTS, ETC. ====== */
+h1 { margin-top: 0; margin-bottom: 20px; color: #033D60; font-size: 1.8em; }
+.logo-fundo { display: block; margin: 0 auto 25px auto; width: 180px; }
+input[type="text"] { padding: 1px; font-size: 16px; border: auto; }
+input[type="button"] { padding: 1px; font-size: 15px; cursor: pointer; margin-left: 5px; text-align: center; }
+#res { text-align: center; margin-top: 20px; font-size: 18px; line-height: 1.6; }
 
-/* ====== TÍTULO, LOGO, INPUTS (SEM MUDANÇAS) ====== */
-h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #033D60;
-    font-size: 1.8em;
-}
-.logo-fundo {
-    display: block;
-    margin: 0 auto 25px auto;
-    width: 180px;
-}
-input[type="text"] {
-    padding: 1px;
-    font-size: 16px;
-    border: auto;
-}
-input[type="button"] {
-    padding: 1px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 5px;
-    text-align: center;
-}
-#res {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* ================================================= */
-/* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
-/* ================================================= */
+/* ======================================================== */
+/* ====== MUDANÇA DE LÓGICA PARA TELAS PEQUENAS ====== */
+/* ======================================================== */
 @media (max-width: 768px) {
     
-    /* AQUI ESTÁ A CORREÇÃO FINAL: Vamos reduzir todos os espaços
-       verticais para que a soma deles seja menor que a altura da tela. */
+    /* No celular, mudamos a lógica para um layout simples, onde o rodapé não é empurrado para baixo. */
 
-    h1 {
-        font-size: 1.4em;       /* Diminui o tamanho do título */
-        margin-bottom: 10px;    /* Diminui o espaço abaixo do título */
-    }
-
-    .logo-fundo {
-        margin-bottom: 15px;    /* Diminui o espaço abaixo da logo */
-    }
-    
     header {
-        margin-bottom: 20px;    /* Diminui a distância entre header e section */
-        padding: 5px;           /* Diminui o padding interno */
+        margin-bottom: 25px;
     }
 
     section {
-        margin-bottom: 20px;    /* Diminui a distância entre section e footer */
+        /* No celular, a 'section' não precisa de margem embaixo, pois o footer terá no topo. */
+        margin-bottom: 0;
+    }
+
+    footer {
+        /* AQUI ESTÁ A MUDANÇA-CHAVE PARA O CELULAR:
+           Nós DESLIGAMOS a regra 'margin-top: auto' (que cria o espaço gigante)
+           e a substituímos por uma margem fixa e normal. */
+        margin-top: 40px;
     }
 }
