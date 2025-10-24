@@ -106,3 +106,21 @@ footer {
     font-size: 11px;                /* 🔧 Tamanho do texto pequeno do rodapé. */
     border-top: 1px solid #ccc;     /* Cria uma linha fina e cinza no topo do rodapé (opcional). */
 }
+
+/* ================================================= */
+/* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
+/* ================================================= */
+
+/* Esta regra só será aplicada se a tela tiver no máximo 768px de largura */
+@media (max-width: 768px) {
+
+    /* Diminui o espaço entre o header e a section */
+    header {
+        margin-bottom: 20px; /* Era 40px, agora é 20px em telas pequenas */
+    }
+
+    /* Diminui o espaço entre a section e o footer */
+    section {
+        margin-bottom: 20px; /* Era 40px, agora é 20px em telas pequenas */
+    }
+}
