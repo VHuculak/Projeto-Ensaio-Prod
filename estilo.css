@@ -1,5 +1,5 @@
 /* ================================================= */
-/* ARQUIVO CSS FINAL (COM LÓGICA ÚNICA E CORRETA)    */
+/* ARQUIVO CSS FINAL (COM CORREÇÃO PARA CELULAR REAL)*/
 /* ================================================= */
 
 /* ====== GERAL ====== */
@@ -15,7 +15,11 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    
+    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA */
+    /* 'dvh' é a altura dinâmica da tela, que se ajusta às barras do navegador no celular. */
+    min-height: 100dvh;
+    
     margin: 0;
     font-family: Verdana;
     text-align: center;
@@ -33,8 +37,7 @@ header {
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
     text-align: center;
-    /* Distância padrão para PC */
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Distância para PC */
 }
 
 /* ====== SECTION (CAIXA DE RESULTADO) ====== */
@@ -45,21 +48,17 @@ section {
     width: 95%;
     max-width: 735px;
     border: 1px solid #5a5a5a3d;
-    /* Distância de segurança para quando o conteúdo é longo */
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Distância para PC */
 }
 
 /* ====== FOOTER (RODAPÉ) ====== */
 footer {
-    /* ESTA É A LÓGICA CORRETA PARA TODAS AS TELAS.
-       Ela empurra o rodapé para a base da tela se houver espaço sobrando. */
     margin-top: auto;
-    
     width: 100%;
     background-color: #ececec;
     color: #555;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     font-size: 11px;
     border-top: 1px solid #ccc;
 }
@@ -105,14 +104,14 @@ input[type="button"] {
 /* ======================================================== */
 @media (max-width: 768px) {
     
-    /* Para que a lógica do rodapé dinâmico funcione no celular,
-       precisamos reduzir os espaços fixos para que a "conta da altura" feche. */
+    /* Mesmo com 'dvh', é bom reduzir os espaços para garantir que caiba
+       na menor altura possível da tela (quando as barras do navegador estão visíveis). */
 
     header {
-        margin-bottom: 25px; /* Reduz a distância entre header e section */
+        margin-bottom: 25px;
     }
 
     section {
-        margin-bottom: 25px; /* Reduz a distância de segurança abaixo da section */
+        margin-bottom: 25px;
     }
 }
