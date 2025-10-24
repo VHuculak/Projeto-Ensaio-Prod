@@ -107,6 +107,8 @@ footer {
     border-top: 1px solid #ccc;     /* Cria uma linha fina e cinza no topo do rodapé (opcional). */
 }
 
+
+
 /* ================================================= */
 /* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
 /* ================================================= */
@@ -114,13 +116,26 @@ footer {
 /* Esta regra só será aplicada se a tela tiver no máximo 768px de largura */
 @media (max-width: 768px) {
 
-    /* Diminui o espaço entre o header e a section */
+    /* Diminui o tamanho do título principal para economizar espaço vertical */
+    h1 {
+        font-size: 1.5em; /* Um pouco menor que no PC */
+        margin-bottom: 15px; /* Reduz o espaço abaixo dele */
+    }
+
+    /* Diminui o espaço acima e abaixo do header */
     header {
-        margin-bottom: 20px; /* Era 40px, agora é 20px em telas pequenas */
+        margin-top: 15px; /* Era 20px */
+        margin-bottom: 25px; /* Era 40px */
+    }
+    
+    /* Diminui o tamanho da logo */
+    .logo-fundo {
+        width: 150px; /* Era 180px */
+        margin-bottom: 20px; /* Era 25px */
     }
 
     /* Diminui o espaço entre a section e o footer */
     section {
-        margin-bottom: 20px; /* Era 40px, agora é 20px em telas pequenas */
+        margin-bottom: 25px; /* Era 40px */
     }
 }
