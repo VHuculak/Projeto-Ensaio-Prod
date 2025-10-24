@@ -1,36 +1,33 @@
 /* ================================================= */
-/* ARQUIVO CSS COM CORREÇÃO FINAL DE BOX-SIZING      */
+/* ARQUIVO CSS SIMPLIFICADO E CORRIGIDO              */
 /* ================================================= */
 
-/* ====== GERAL E RESET ====== */
-html {
-    /* PASSO 1: A MUDANÇA MAIS IMPORTANTE. */
-    /* Isso muda a forma como o navegador calcula o tamanho das caixas.
-       Agora, padding e border não aumentam o tamanho total, prevenindo a rolagem extra. */
-    box-sizing: border-box;
+html, body {
     height: 100%;
-}
-/* Faz todos os outros elementos herdarem essa regra de forma inteligente. */
-*, *:before, *:after {
-    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-/* ====== BODY ====== */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
     font-family: Verdana;
     text-align: center;
     background-color: #ffffff;
-
-    /* Centraliza os blocos (header, section) na horizontal. */
-    align-items: center;
-    /* REMOVEMOS O PADDING-TOP DAQUI. Ele era parte do problema. */
 }
 
-/* ====== HEADER (CABEÇALHO) ====== */
+/* Este é o novo bloco principal que segura o header e a section juntos.
+  É um container invisível.
+*/
+main {
+    flex-grow: 1; /* ESSA É A SOLUÇÃO: Faz este bloco crescer e empurrar o footer para baixo, preenchendo o espaço vazio. A sua 'section' cinza NÃO vai esticar. */
+    
+    /* Estas regras garantem que o header e a section dentro dele fiquem centralizados. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     background-color: #ececec;
     width: 95%;
@@ -38,12 +35,32 @@ header {
     padding: 10px;
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
-    text-align: center;
+    box-sizing: border-box;
 
-    /* PASSO 2: O espaçamento do topo agora é controlado pelo header. */
-    margin-top: 20px;
-    /* A distância fixa para a section continua aqui. */
+    /* Mantém o header no topo com um respiro e a distância fixa para a section. */
+    margin-top: 5px;
     margin-bottom: 40px;
+}
+
+section {
+    background-color: #ececec;
+    border-radius: 20px;
+    padding: 15px;
+    width: 95%;
+    max-width: 735px;
+    border: 1px solid #5a5a5a3d;
+    box-sizing: border-box;
+}
+
+footer {
+    width: 100%;
+    background-color: #ececec;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 /* ====== TÍTULO ====== */
@@ -54,79 +71,4 @@ h1 {
     font-size: 1.8em;
 }
 
-/* ====== LOGO ====== */
-.logo-fundo {
-    display: block;
-    margin: 0 auto 25px auto;
-    width: 180px;
-}
-
-/* ====== INPUTS E BOTÃO ====== */
-input[type="text"] {
-    padding: 1px;
-    font-size: 16px;
-    border: auto;
-}
-input[type="button"] {
-    padding: 1px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 5px;
-    text-align: center;
-}
-
-/* ====== SECTION (CAIXA DE RESULTADO) ====== */
-section {
-    background-color: #ececec;
-    border-radius: 20px;
-    padding: 15px;
-    width: 95%;
-    max-width: 735px;
-    border: 1px solid #5a5a5a3d;
-
-    /* Garante um espaço mínimo abaixo da section quando o conteúdo é longo. */
-    margin-bottom: 40px;
-}
-
-/* ====== DIV DE RESULTADO (#res) ====== */
-#res {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* ====== FOOTER (RODAPÉ) ====== */
-footer {
-    /* Esta lógica está correta e permanece. */
-    margin-top: auto;
-    width: 100%;
-    background-color: #ececec;
-    color: #555;
-    text-align: center;
-    padding: 10px;
-    font-size: 11px;
-    border-top: 1px solid #ccc;
-}
-
-
-/* ================================================= */
-/* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
-/* ================================================= */
-@media (max-width: 768px) {
-    /* Reduz drasticamente os espaços verticais APENAS no celular para evitar a rolagem */
-    
-    header {
-        margin-top: 15px;      /* Era 20px */
-        margin-bottom: 25px;   /* Era 40px */
-    }
-
-    section {
-        margin-bottom: 25px;   /* Era 40px */
-    }
-
-    h1 {
-        font-size: 1.5em;      /* Reduz o tamanho do título */
-        margin-bottom: 15px;
-    }
-}
+/* ====== LOGO ======
