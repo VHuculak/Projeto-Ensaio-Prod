@@ -1,5 +1,5 @@
 /* ================================================= */
-/* ARQUIVO CSS FINAL (COM ESTRATÉGIA DUPLA CORRETA)  */
+/* ARQUIVO CSS FINAL (COM LÓGICA ÚNICA E CORRETA)    */
 /* ================================================= */
 
 /* ====== GERAL ====== */
@@ -15,7 +15,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Para o PC, a página sempre tenta ocupar a tela inteira. */
+    min-height: 100vh;
     margin: 0;
     font-family: Verdana;
     text-align: center;
@@ -33,6 +33,7 @@ header {
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
     text-align: center;
+    /* Distância padrão para PC */
     margin-bottom: 40px;
 }
 
@@ -44,13 +45,14 @@ section {
     width: 95%;
     max-width: 735px;
     border: 1px solid #5a5a5a3d;
-    /* A margem de baixo aqui serve para quando o conteúdo é LONGO e precisa de scroll. */
+    /* Distância de segurança para quando o conteúdo é longo */
     margin-bottom: 40px;
 }
 
 /* ====== FOOTER (RODAPÉ) ====== */
 footer {
-    /* ESTA É A LÓGICA PARA O PC: Empurra o rodapé para a base da tela. */
+    /* ESTA É A LÓGICA CORRETA PARA TODAS AS TELAS.
+       Ela empurra o rodapé para a base da tela se houver espaço sobrando. */
     margin-top: auto;
     
     width: 100%;
@@ -62,6 +64,7 @@ footer {
     border-top: 1px solid #ccc;
 }
 
+
 /* ====== TÍTULOS, INPUTS, ETC. ====== */
 h1 { 
     margin-top: 0; 
@@ -69,16 +72,19 @@ h1 {
     color: #033D60; 
     font-size: 1.8em; 
 }
+
 .logo-fundo { 
     display: block; 
     margin: 0 auto 25px auto; 
     width: 180px; 
 }
+
 input[type="text"] { 
     padding: 1px; 
     font-size: 16px; 
     border: auto; 
 }
+
 input[type="button"] { 
     padding: 1px; 
     font-size: 15px; 
@@ -86,6 +92,7 @@ input[type="button"] {
     margin-left: 5px; 
     text-align: center; 
 }
+
 #res { 
     text-align: center; 
     margin-top: 20px; 
@@ -94,26 +101,18 @@ input[type="button"] {
 }
 
 /* ======================================================== */
-/* ====== MUDANÇA DE ESTRATÉGIA PARA TELAS PEQUENAS ====== */
+/* ====== AJUSTES PARA O RODAPÉ DINÂMICO NO CELULAR ====== */
 /* ======================================================== */
 @media (max-width: 768px) {
     
-    /* No celular, mudamos a lógica para um layout simples, onde o rodapé não é empurrado para baixo. */
+    /* Para que a lógica do rodapé dinâmico funcione no celular,
+       precisamos reduzir os espaços fixos para que a "conta da altura" feche. */
 
-    body {
-        /* AVISAMOS A PÁGINA PARA NÃO TENTAR MAIS PREENCHER A TELA INTEIRA.
-           Ela agora terá a altura que o conteúdo precisar. */
-        min-height: auto;
-    }
-
-    footer {
-        /* DESLIGAMOS a regra que empurra o rodapé para baixo
-           e a substituímos por um espaçamento normal e fixo. */
-        margin-top: 40px;
-    }
-
-    /* Reduzimos o espaço entre header e section para um visual mais compacto */
     header {
-        margin-bottom: 25px;
+        margin-bottom: 25px; /* Reduz a distância entre header e section */
+    }
+
+    section {
+        margin-bottom: 25px; /* Reduz a distância de segurança abaixo da section */
     }
 }
