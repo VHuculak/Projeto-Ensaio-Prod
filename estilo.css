@@ -1,66 +1,42 @@
 /* ================================================= */
-/* ARQUIVO CSS SIMPLIFICADO E CORRIGIDO              */
+/* ARQUIVO CSS RESTAURADO, CORRIGIDO E FINALIZADO    */
 /* ================================================= */
 
-html, body {
+/* ====== GERAL ====== */
+html {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
+/* ====== BODY ====== */
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: Verdana;
     text-align: center;
     background-color: #ffffff;
-}
 
-/* Este é o novo bloco principal que segura o header e a section juntos.
-  É um container invisível.
-*/
-main {
-    flex-grow: 1; /* ESSA É A SOLUÇÃO: Faz este bloco crescer e empurrar o footer para baixo, preenchendo o espaço vazio. A sua 'section' cinza NÃO vai esticar. */
-    
-    /* Estas regras garantem que o header e a section dentro dele fiquem centralizados. */
-    display: flex;
-    flex-direction: column;
+    /* CORREÇÃO 1: Centraliza todos os blocos (header, section) na horizontal de forma robusta. */
     align-items: center;
+
+    /* CORREÇÃO 2: Restaura seu espaçamento original no topo da página. */
+    padding-top: 5px;
 }
 
+/* ====== HEADER (CABEÇALHO) ====== */
 header {
     background-color: #ececec;
-    width: 95%;
+    width: 95%; /* Ajustado para corresponder à section, criando alinhamento visual */
     max-width: 735px;
     padding: 10px;
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
-    box-sizing: border-box;
-
-    /* Mantém o header no topo com um respiro e a distância fixa para a section. */
-    margin-top: 5px;
-    margin-bottom: 40px;
-}
-
-section {
-    background-color: #ececec;
-    border-radius: 20px;
-    padding: 15px;
-    width: 95%;
-    max-width: 735px;
-    border: 1px solid #5a5a5a3d;
-    box-sizing: border-box;
-}
-
-footer {
-    width: 100%;
-    background-color: #ececec;
-    color: #555;
     text-align: center;
-    padding: 10px;
-    font-size: 11px;
-    border-top: 1px solid #ccc;
     box-sizing: border-box;
+
+    /* CORREÇÃO 3: Restaura a lógica de distância fixa. O header empurra a section com 40px. */
+    margin-bottom: 40px;
 }
 
 /* ====== TÍTULO ====== */
@@ -71,4 +47,82 @@ h1 {
     font-size: 1.8em;
 }
 
-/* ====== LOGO ======
+/* ====== LOGO ====== */
+.logo-fundo {
+    display: block;
+    margin: 0 auto 25px auto;
+    width: 180px;
+}
+
+/* ====== INPUTS E BOTÃO ====== */
+input[type="text"] {
+    padding: 1px;
+    font-size: 16px;
+    border: auto;
+}
+input[type="button"] {
+    padding: 1px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 5px;
+    text-align: center;
+}
+
+/* ====== SECTION (CAIXA DE RESULTADO) ====== */
+section {
+    background-color: #ececec;
+    border-radius: 20px;
+    padding: 15px;
+    width: 95%;
+    max-width: 735px;
+    border: 1px solid #5a5a5a3d;
+    box-sizing: border-box;
+
+    /* Garante um espaço mínimo abaixo da section quando o conteúdo é longo. */
+    margin-bottom: 40px;
+}
+
+/* ====== DIV DE RESULTADO (#res) ====== */
+#res {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ====== FOOTER (RODAPÉ) ====== */
+footer {
+    /* Restaura a lógica correta que funciona no PC. */
+    margin-top: auto;
+    
+    /* Garante que o footer ocupe toda a largura, já que o body agora centraliza os itens. */
+    width: 100%;
+
+    background-color: #ececec;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    border-top: 1px solid #ccc;
+}
+
+
+/* ================================================= */
+/* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
+/* ================================================= */
+@media (max-width: 768px) {
+    /* Reduz drasticamente os espaços verticais APENAS no celular */
+    
+    header {
+        margin-bottom: 25px; /* Era 40px */
+    }
+
+    section {
+        margin-bottom: 25px; /* Era 40px */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+        margin-bottom: 15px;
+    }
+}
