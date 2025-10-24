@@ -1,10 +1,18 @@
 /* ================================================= */
-/* ARQUIVO CSS RESTAURADO, CORRIGIDO E FINALIZADO    */
+/* ARQUIVO CSS COM CORREÇÃO FINAL DE BOX-SIZING      */
 /* ================================================= */
 
-/* ====== GERAL ====== */
+/* ====== GERAL E RESET ====== */
 html {
+    /* PASSO 1: A MUDANÇA MAIS IMPORTANTE. */
+    /* Isso muda a forma como o navegador calcula o tamanho das caixas.
+       Agora, padding e border não aumentam o tamanho total, prevenindo a rolagem extra. */
+    box-sizing: border-box;
     height: 100%;
+}
+/* Faz todos os outros elementos herdarem essa regra de forma inteligente. */
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 /* ====== BODY ====== */
@@ -17,25 +25,24 @@ body {
     text-align: center;
     background-color: #ffffff;
 
-    /* CORREÇÃO 1: Centraliza todos os blocos (header, section) na horizontal de forma robusta. */
+    /* Centraliza os blocos (header, section) na horizontal. */
     align-items: center;
-
-    /* CORREÇÃO 2: Restaura seu espaçamento original no topo da página. */
-    padding-top: 5px;
+    /* REMOVEMOS O PADDING-TOP DAQUI. Ele era parte do problema. */
 }
 
 /* ====== HEADER (CABEÇALHO) ====== */
 header {
     background-color: #ececec;
-    width: 95%; /* Ajustado para corresponder à section, criando alinhamento visual */
+    width: 95%;
     max-width: 735px;
     padding: 10px;
     border-radius: 15px;
     border: 1px solid #5a5a5a3d;
     text-align: center;
-    box-sizing: border-box;
 
-    /* CORREÇÃO 3: Restaura a lógica de distância fixa. O header empurra a section com 40px. */
+    /* PASSO 2: O espaçamento do topo agora é controlado pelo header. */
+    margin-top: 20px;
+    /* A distância fixa para a section continua aqui. */
     margin-bottom: 40px;
 }
 
@@ -76,7 +83,6 @@ section {
     width: 95%;
     max-width: 735px;
     border: 1px solid #5a5a5a3d;
-    box-sizing: border-box;
 
     /* Garante um espaço mínimo abaixo da section quando o conteúdo é longo. */
     margin-bottom: 40px;
@@ -92,12 +98,9 @@ section {
 
 /* ====== FOOTER (RODAPÉ) ====== */
 footer {
-    /* Restaura a lógica correta que funciona no PC. */
+    /* Esta lógica está correta e permanece. */
     margin-top: auto;
-    
-    /* Garante que o footer ocupe toda a largura, já que o body agora centraliza os itens. */
     width: 100%;
-
     background-color: #ececec;
     color: #555;
     text-align: center;
@@ -111,18 +114,19 @@ footer {
 /* ====== AJUSTES PARA TELAS PEQUENAS (CELULAR) ====== */
 /* ================================================= */
 @media (max-width: 768px) {
-    /* Reduz drasticamente os espaços verticais APENAS no celular */
+    /* Reduz drasticamente os espaços verticais APENAS no celular para evitar a rolagem */
     
     header {
-        margin-bottom: 25px; /* Era 40px */
+        margin-top: 15px;      /* Era 20px */
+        margin-bottom: 25px;   /* Era 40px */
     }
 
     section {
-        margin-bottom: 25px; /* Era 40px */
+        margin-bottom: 25px;   /* Era 40px */
     }
 
     h1 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
+        font-size: 1.5em;      /* Reduz o tamanho do título */
         margin-bottom: 15px;
     }
 }
