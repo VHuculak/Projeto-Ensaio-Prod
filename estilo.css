@@ -41,36 +41,37 @@ body {
     align-items: center;
 
     /* 🔧 Seu espaçamento original de 5px no topo da página. */
-    padding-top: 5px;
+    padding-top: 2px;
 }
 
 /* ====== HEADER (CABEÇALHO) ====== */
 header {
-    background-color: #ececec;      /* 🔧 Cor de fundo do cabeçalho. */
+    background-color: #dee2e6;      /* 🔧 Cor de fundo do cabeçalho. */
     width: 95%;                     /* 🔧 Largura do cabeçalho. */
     max-width: 735px;               /* 🔧 Largura máxima em telas grandes, para não ficar gigante. */
     padding: 10px;                  /* 🔧 Espaçamento interno do cabeçalho. */
     border-radius: 15px;            /* 🔧 Deixa os cantos da caixa arredondados. */
     border: 1px solid #5a5a5a3d;    /* 🔧 Estilo da borda. */
     text-align: center;             /* Garante que o texto dentro do header fique centralizado. */
-    margin-bottom: 40px;            /* 🔧 Distância fixa entre o header e a section (para PC). */
+    margin-bottom: 5px;            /* 🔧 Distância fixa entre o header e a section (para PC). */
 }
 
+/* ====== FRASE ABAIXO DA PESQUISA (CABEÇALHO) ====== */
 .obs {
     font-size: 10px;
     text-align: center;
 }
 
 /* ====== SECTION (CAIXA DE RESULTADO) ====== */
-section {
+/*section {
     background-color: #ececec;      /* 🔧 Cor de fundo da caixa de resultados. */
-    border-radius: 20px;            /* 🔧 Arredondamento dos cantos. */
-    padding: 15px;                  /* 🔧 Espaçamento interno da caixa. */
-    width: 95%;                     /* 🔧 Largura da caixa. */
-    max-width: 735px;               /* 🔧 Largura máxima em telas grandes. */
-    border: 1px solid #5a5a5a3d;    /* 🔧 Estilo da borda da caixa. */
-    margin-bottom: 40px;            /* 🔧 Distância de segurança para quando o conteúdo é longo (para PC). */
-}
+ /*   border-radius: 20px;            /* 🔧 Arredondamento dos cantos. */
+ /*   padding: 15px;                  /* 🔧 Espaçamento interno da caixa. */
+ /*   width: 95%;                     /* 🔧 Largura da caixa. */
+ /*   max-width: 735px;               /* 🔧 Largura máxima em telas grandes. */
+ /*   border: 1px solid #5a5a5a3d;    /* 🔧 Estilo da borda da caixa. */
+ /*   margin-bottom: 40px;            /* 🔧 Distância de segurança para quando o conteúdo é longo (para PC). 
+} */
 
 /* ====== FOOTER (RODAPÉ) ====== */
 footer {
@@ -82,7 +83,7 @@ footer {
     background-color: #ececec;      /* 🔧 Cor de fundo do rodapé. */
     color: #555;                    /* 🔧 Cor do texto do rodapé. */
     text-align: center;             /* Centraliza o texto do rodapé. */
-    padding: 5px;                   /* 🔧 Seu espaçamento interno original. */
+    padding: 3px;                   /* 🔧 Seu espaçamento interno original. */
     font-size: 11px;                /* 🔧 Tamanho do texto do rodapé. */
     border-top: 1px solid #ccc;     /* Cria uma linha fina no topo do rodapé. */
 }
@@ -92,7 +93,7 @@ footer {
 h1 { 
     margin-top: 0;                  /* Remove um espaço extra que o título poderia ter no topo. */
     margin-bottom: 20px;            /* 🔧 Espaço entre o título e a logo. */
-    color: #033D60;                 /* 🔧 Cor do texto do título. */
+    color: #033d60;                 /* 🔧 Cor do texto do título. */
     font-size: 1.8em;               /* 🔧 Tamanho do título. */
 }
 
@@ -102,25 +103,83 @@ h1 {
     width: 180px;                   /* 🔧 Tamanho da logo. */
 }
 
-input[type="text"] { 
-    padding: 1px;                   /* 🔧 Espaçamento interno do campo de texto. */
-    font-size: 16px;                /* 🔧 Tamanho da fonte no campo de texto. */
-    border: auto;                   /* Usa a borda padrão do navegador. */
+
+
+/* =================================================================  */
+
+button { 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    border: 1px solid #033d60;
+    border-radius: 5px;
+    padding: 10px;
+    background: #033d60;
+    color: rgb(255, 255, 255);
+    padding: 10px;
 }
 
-input[type="button"] { 
-    padding: 1px;                   /* 🔧 Espaçamento interno do botão. */
-    font-size: 15px;                /* 🔧 Tamanho da fonte do botão. */
-    cursor: pointer;                /* Mostra o cursor de "mãozinha" ao passar sobre o botão. */
-    margin-left: 5px;               /* 🔧 Espaço à esquerda do botão. */
-    text-align: center;
+button:hover {
+    background-color: transparent
 }
 
-#res { 
-    text-align: center;
-    margin-top: 20px;               /* 🔧 Espaço entre o topo da caixa e o início do resultado. */
-    font-size: 18px;                /* 🔧 Tamanho do texto do resultado. */
-    line-height: 1.6;               /* 🔧 Altura da linha. Melhora a leitura de textos longos. */
+input { 
+    width: 80%; 
+    padding: 8px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 1. Estilizando a LISTA (o <ul>) */
+ul { 
+  list-style: none; 
+  padding: 0;
+  margin: 0; /* Adicionado para garantir o reset */
+
+  /* --- CONFIGURAÇÃO DO GRID --- */
+  
+  /* 1. Ativa o CSS Grid */
+  display: grid;
+  
+  /* 2. A coluna ÚNICA terá a largura do item mais largo */
+  grid-template-columns: max-content;
+
+  /* 3. Centraliza o bloco da lista (a coluna) na página */
+  justify-content: center; 
+}
+
+/* 2. Estilizando CADA ITEM (o <li>) */
+li { 
+  background-color: #dee2e6; 
+  padding: 15px; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  
+  /* --- AJUSTES FINAIS --- */
+
+  /* 1. Adicione a margem APENAS na vertical (para cima/baixo) 
+     Removemos o 'auto' para o Grid poder controlar o alinhamento */
+  margin: 8px 0; 
+  /* (Isso é o mesmo que margin-top: 8px; margin-bottom: 8px;) */
+  
+  /* 2. Força o texto a ficar em UMA ÚNICA LINHA 
+     para o 'max-content' funcionar corretamente */
+  white-space: nowrap; 
+
+  /* 3. (IMPORTANTE) REMOVA AS LINHAS:
+     max-width: 400px;
+     margin: 8px auto; 
+  */
+}
+
+/* A CLASSE MAIS IMPORTANTE! */
+/* Qualquer elemento com a classe "hidden" vai sumir da tela. */
+.hidden {
+    display: none;
 }
 
 /* ======================================================== */
