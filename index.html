@@ -3,19 +3,20 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Lista de Serviços - Maringá e Região</title>
+      <title>Relatório CCB - Maringá e Região</title>
       <link rel="stylesheet" href="estilo.css"> <!-- cria um link para outro arquivo
     Separando o css do HTML e JS -->
       
 </head>
 <body>
     <header>
-    <h1>Ensaio Musical em Maringá e Região</h1>
+    <h1>Relatório CCB - Maringá e Região</h1>
     <img class="logo-fundo" src="logo_oficial_CCB.png" alt="Logo">
 
     <button onclick="mostrarCultos()">Cultos</button>
     <button onclick="mostrarEnsaios()">Ensaios</button>
     <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button>
+    <button onclick="mostrarServiços()">Serviços</button>
     </header>
 
     <main>
@@ -23,43 +24,42 @@
             <h2>Agenda de Cultos</h2>
             <input id="busca-cultos" placeholder="Digite o dia ou local...">
             <ul id="lista-cultos">
-                <li>Vila Santo Antônio - Terça e Sábado - 19:30</li>
-                <li>Jardim Vitória - Terça e Sábado - 19:30</li>
-                <li>Jardim Verônica - Terça e Sábado - 19:30</li>
-                <li>Jardim Alvorada III - Ebenezer - Terça e Sábado - 19:30</li>
-                <li>Parque Residencial Aeroporto - 3ª Parte - Terça e Sábado - 19:30</li>
-                <li>Parque das Laranjeiras - Terça e Sábado - 19:30</li>
-                <li>Jardim Piatã - Terça e Sábado - 19:30</li>
-                <li>Jardim Olímpico - Terça e Sábado - 19:30</li>
+                <li>Vila Santo Antônio - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Vitória - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Verônica - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Alvorada III - Ebenezer - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Residencial Aeroporto - 3ª Parte - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque das Laranjeiras - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Piatã - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Olímpico - Terça e Sábado - 19:30 | Domingo - 18:30</li>
                 <li>Parque Tarumã - Terça e Sábado - 19:30</li>
-                <li>Jardim Indaiá - Terça e Sábado - 19:30</li>
+                <li>Jardim Indaiá - Terça e Sábado - 19:30 | Domingo - 18:30</li>
 
-                <li>Centro - Central - Quarta e Sábado - 19:30</li>
-                <li>Vila Operária - Quarta e Sábado - 19:30</li>
-                <li>Jardim Alvorada - Quarta e Sábado - 19:30</li>
-                <li>Vila Santa Izabel - Quarta e Sábado - 19:30</li>
-                <li>Distrito de Floriano - Quarta - 19:30</li>
-                <li>Conjunto Requião - Quarta e Sábado - 19:30</li>
-                <li>Jardim Universo - Quarta e Sábado - 19:30</li>
-                <li>Parque Avenida - Quarta e Sábado - 19:30</li>
-                <li>Jardim Oriental - Diamante - Quarta - 19:30</li>
-                <li>Jardim Espanha - Quarta e Sábado - 19:30</li>
+                <li>Centro - Central - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Vila Operária - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Alvorada - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Vila Santa Izabel - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Distrito de Floriano - Quarta - 19:30 | Domingo - 18:30</li>
+                <li>Conjunto Requião - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Universo - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Avenida - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Oriental - Diamante - Quarta - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Espanha - Quarta e Sábado - 19:30 | Domingo - 18:30</li>
 
-                <li>Distrito de Iguatemi - Quinta e Sábado - 19:30</li>
-                <li>Vila Morangueira - Quinta e Sábado - 19:30</li>
-                <li>Parque Residencial Tuiuti - Quinta e Sábado - 19:30</li>
-                <li>Jardim Liberdade - Quinta e Sábado - 19:30</li>
-                <li>Parque Itaipu - Quinta e Sábado - 19:30</li>
-                <li>Parque Hortência - 1ª Parte - Quinta e Sábado - 19:30</li>
-                <li>Jardim Catedral - Quinta e Sábado - 19:30</li>
-                <li>Conjunto Residencial Guaiapó - Quinta e Sábado - 19:30</li>
+                <li>Distrito de Iguatemi - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Vila Morangueira - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Residencial Tuiuti - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Liberdade - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Itaipu - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Hortência - 1ª Parte - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Catedral - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Conjunto Residencial Guaiapó - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
                 <li>Jardim Ouro Cola - Quinta e Sábado - 19:30</li>
-                <li>Jardim Monte Rei - Quinta e Sábado - 19:30</li>
-                <li>Zona 6 - Maringá Velho - Quinta e Sábado - 19:30</li>
-
-                <li>Loteamento Sumaré - Sexta - 19:30</li>
+                <li>Jardim Monte Rei - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Zona 6 - Maringá Velho - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
+            
+                <li>Loteamento Sumaré - Sexta - 19:30 | Domingo - 18:30</li>
             </ul>
-
         </div>
 
         <div id="pagina-ensaios" class="conteudo hidden">
@@ -151,6 +151,35 @@
                 <li>Última Segunda - São Luiz (MVA)</li>
             </ul>
 
+        </div>
+
+        <div id="pagina-serviços" class="conteudo hidden">
+            <h2>Lista de Serviços - 07/11/25</h2>
+            <input id="busca-serviços" placeholder="Digite o dia ou local...">
+            <ul id="lista-serviços">
+                <h3>Batismo</h3>
+                <li>Batismo - Mandaguaçu - 09/11/25 no Domingo às 18:30 - Ancião José Reis</li>
+                <li>Batismo - Floresta - 15/11/25 no Domingo às 19:00 - Ancião João Marinho</li>
+                <li>Batismo - Iguatemi - 16/11/25 no Domingo às 18:30 - Ancião Laerte Tolentino</li>
+
+                <h3>Reuniões de Mocidade</h3>
+                <li>Reunião de Mocidade ONLINE - Bras SP - 30/11/25 no Domingo às 14:00h </li>
+                <li>Reunião de Mocidade - Mandaguaçu - 14/12/25 no Domingo às 14:00 - Ancião Carlos Eduardo G. Silva</li>
+
+                <h3>Culto para Mocidade</h3>
+                <li>Culto para Mocidade - Vila Santa Izabel - 29/11/25 no Sábado às 19:00h - Ancião Osvaldo Donato</li>
+                <li>Culto para Mocidade - Vila Morangueira - 29/11/25 no Sábado às 19:00h - Ancião Carlos Eduardo G. Silva</li>
+                <li>Culto para Mocidade - Floresta - 13/12/25 no Sábado às 19:00h - Ancião Marcos Moreira</li>
+                
+
+                <h3>Ensaios (Música)</h3>
+                <li>Ensaio Regional - Vila Morangueira - 30/11/25 no Domingo às 09:00h - Ancião Clóvis Maciel de Oliveira</li>
+                <li>Ensaio Regional - Jardim Alvorada - 30/11/25 no Domingo às 09:00h - Ancião José Reis</li>
+                <li>Ensaio Geral para Familia de CORDAS - Vila Morangueira - 01/12/25 na Segunda-Feira às 19:30</li>
+                <li>Ensaio Geral para Familia de MADEIRAS - Sarandi (Central) - 01/12/25 na Segunda-Feira às 19:30</li>
+                <li>Ensaio Geral para Familia de METAIS - Paiçandu (Central) - 01/12/25 na Segunda-Feira às 19:30</li>
+
+            </ul>
         </div>
 
     </main>
