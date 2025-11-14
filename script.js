@@ -9,11 +9,13 @@ var paginaEventos = document.getElementById('pagina-serviços');
 
 function mostrarCultos() {
     paginaCultos.classList.remove('hidden');
+    paginaEventos.classList.add('hidden');
     paginaEnsaios.classList.add('hidden');
 }
 
 function mostrarEnsaios() {
     paginaCultos.classList.add('hidden');
+    paginaEventos.classList.add('hidden');
     paginaEnsaios.classList.remove('hidden');
 }
 
