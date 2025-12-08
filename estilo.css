@@ -1,8 +1,4 @@
-/* ================================================= */
-/* ARQUIVO CSS FINAL (COM CORREÇÃO PARA CELULAR REAL)*/
-/* ================================================= */
 
-/* ====== GERAL E CORREÇÃO DE ROLAGEM ====== */
 html {
     /* Manda o navegador calcular o tamanho das caixas de uma forma mais inteligente.
        Isso impede que 'padding' (espaço interno) e 'border' (borda) criem espaço extra
@@ -19,7 +15,7 @@ html {
     box-sizing: inherit;
 }
 
-/* ====== BODY ====== */
+
 body {
     /* Ativa o modo "Flexbox", que transforma o body em um organizador inteligente de layout. */
     display: flex;
@@ -27,7 +23,7 @@ body {
     /* Diz ao organizador para empilhar os itens (header, section, footer) em uma coluna vertical. */
     flex-direction: column;
     
-    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA PARA CELULAR REAL */
+
     /* Garante que a página tenha no mínimo a altura REAL da tela. 'dvh' (Dynamic Viewport Height)
        é uma unidade moderna que se ajusta às barras do navegador (endereço, etc.) que aparecem e somem no celular. */
     min-height: 100dvh;
@@ -54,12 +50,6 @@ header {
     border: 1px solid #5a5a5a3d;    /* 🔧 Estilo da borda. */
     text-align: center;             /* Garante que o texto dentro do header fique centralizado. */
     margin-bottom: 5px;            /* 🔧 Distância fixa entre o header e a section (para PC). */
-}
-
-/* ====== FRASE ABAIXO DA PESQUISA (CABEÇALHO) ====== */
-.obs {
-    font-size: 10px;
-    text-align: center;
 }
 
 
@@ -115,6 +105,8 @@ button:hover {
     background-color: transparent
 }
 
+
+
 input { 
     width: 80%; 
     padding: 8px; 
@@ -150,7 +142,6 @@ li {
   border-radius: 5px;
   text-align: left;
   
-  /* --- AJUSTES FINAIS --- */
 
   /* 1. Adicione a margem APENAS na vertical (para cima/baixo) 
      Removemos o 'auto' para o Grid poder controlar o alinhamento */
@@ -161,22 +152,49 @@ li {
      para o 'max-content' funcionar corretamente */
   white-space: nowrap; 
 
-  /* 3. (IMPORTANTE) REMOVA AS LINHAS:
-     max-width: 400px;
-     margin: 8px auto; 
-  */
 }
 
-/* A CLASSE MAIS IMPORTANTE! */
+
 /* Qualquer elemento com a classe "hidden" vai sumir da tela. */
 .hidden {
     display: none;
 }
 
 
-/* ======================================================== */
-/* ====== REGRAS ESPECIAIS PARA TELAS PEQUENAS (CELULAR) ====== */
-/* ======================================================== */
+#legenda_musica {
+    text-align: center;
+    margin-top: 15px;
+    justify-content: center;
+    
+}
+
+
+#legenda_musica p {
+  /* 1. Remove margens padrão desnecessárias */
+  margin-top: 0;
+  margin-bottom: 5px; 
+  
+  /* 2. Cria o Recuo Pendurado */
+  
+  /* Adiciona um padding esquerdo para empurrar TODO o conteúdo (incluindo a bolinha) */
+  padding-left: 15px; /* Ajuste este valor: é o espaço da bolinha + recuo do texto */
+  
+  /* Puxa a primeira linha (onde está a bolinha) para o espaço criado pelo padding.
+     O valor deve ser negativo e IGUAL ao valor do padding-left. */
+  text-indent: -15px; 
+  
+  /* Garante que o texto se alinhe bem à esquerda (pode não ser necessário, mas ajuda) */
+  text-align: left;
+  padding: 12px;
+}
+
+
+
+/* =======================================================================
+
+/* Regras especificas para celulares 
+
+
 
 /* A regra abaixo só será aplicada em telas com largura máxima de 768px (celulares e tablets pequenos).
    No PC, tudo que está aqui dentro é completamente ignorado. */
@@ -193,14 +211,22 @@ li {
         margin-bottom: 25px;        /* 🔧 Reduz a distância de segurança abaixo da section no celular. */
     }
     button {
-        font-size: 14px;
+        font-size: 13px;
         margin: 4px;
     }
 
+    #botoes button{
+        font-size: 13px;
+        margin: 4px;
+        
+    }
 
-    /* ======================================= */
-    /* ====== CORREÇÃO DA LISTA NO CELULAR ====== */
-    /* ======================================= */
+    #legenda_musica {
+        text-align: auto;
+
+    }
+
+
 
     /* 1. Define que a lista (<ul>) deve ter 95% de largura
           e a RE-CENTRALIZA na tela. */
@@ -221,4 +247,21 @@ li {
         white-space: normal;
     }
 
+}
+
+#legenda_musica p {
+  /* 1. Remove margens padrão desnecessárias */
+  margin-top: 0;
+  margin-bottom: 5px; 
+  
+  /* 2. Cria o Recuo Pendurado */
+  
+  /* Puxa a primeira linha (onde está a bolinha) para o espaço criado pelo padding.
+     O valor deve ser negativo e IGUAL ao valor do padding-left. */
+  text-indent: -9px; 
+  
+
+  /* Garante que o texto se alinhe bem à esquerda (pode não ser necessário, mas ajuda) */
+  text-align: left;
+  padding: 12px;
 }

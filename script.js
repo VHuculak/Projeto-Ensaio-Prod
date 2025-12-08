@@ -1,16 +1,14 @@
-// --- PARTE 1: PEGAR OS ELEMENTOS DO HTML ---
-// (Esta parte estava correta)
-var paginaCultos = document.getElementById('pagina-cultos');
-var paginaEnsaios = document.getElementById('pagina-ensaios');
-var paginaEventos = document.getElementById('pagina-serviços');
+// --- Elementos da Página ---
+const paginaCultos = document.getElementById('pagina-cultos');
+const paginaEnsaios = document.getElementById('pagina-ensaios');
+const paginaEventos = document.getElementById('pagina-serviços');
 
-
-// --- PARTE 2: FUNÇÕES PARA MOSTRAR E ESCONDER AS PÁGINAS ---
+// --- Esconder abas para navegação ---
 
 function mostrarCultos() {
-    paginaCultos.classList.remove('hidden');
     paginaEventos.classList.add('hidden');
     paginaEnsaios.classList.add('hidden');
+    paginaCultos.classList.remove('hidden');
 }
 
 function mostrarEnsaios() {
@@ -25,72 +23,41 @@ function mostrarServiços() {
     paginaEventos.classList.remove('hidden');
 }
 
-// =====================================================================
-// !! MUDANÇA 1: A NOVA FUNÇÃO AJUDANTE !!
-// =====================================================================
-/**
- * Remove acentos e caracteres especiais de uma string.
- * Exemplo: "Última" vira "Ultima"
- * @param {string} texto O texto para normalizar.
- * @returns {string} O texto sem acentos.
- */
+ /* Remove acentos para facilitar a busca */
 function removerAcentos(texto) {
-    // Garante que não dê erro se o texto for nulo ou vazio
     if (!texto) return "";
-
-    // O comando "mágico" para remover os acentos
+    // NFD separa o acento da letra, e o Regex substitui o acento por vazio
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
-// =====================================================================
-// FIM DA MUDANÇA 1
-// =====================================================================
-
-
-// --- PARTE 3: A FUNÇÃO DE BUSCA (COM A CORREÇÃO) ---
 
 function configurarBusca(idInput, idLista) {
-    // 1. Pega os elementos do HTML (Correto)
-    var input = document.getElementById(idInput);
-    var listaItens = document.getElementById(idLista).getElementsByTagName('li');
+    const input = document.getElementById(idInput);
+    
+    // Segurança: se o input não existir na página, para a execução
+    if (!input) return; 
 
-    // 2. Fica "escutando" o que o usuário digita (Correto)
+    const listaItens = document.getElementById(idLista).getElementsByTagName('li');
+
     input.addEventListener('input', function() {
+        const termoBuscado = input.value.toLowerCase();
+        const termoSemAcento = removerAcentos(termoBuscado);
+        
+        // Separa o que foi digitado por espaço para buscar palavras fora de ordem
+        const palavrasBuscadas = termoSemAcento.split(' ');
 
-        // =====================================================================
-        // !! MUDANÇA 2: LIMPANDO O TEXTO QUE O USUÁRIO DIGITOU !!
-        // =====================================================================
-        var termoBuscado = input.value.toLowerCase();
-        // Passamos o termo buscado pela nossa nova função
-        var termoSemAcento = removerAcentos(termoBuscado);
-        // Dividimos as palavras já sem acentos
-        var palavrasBuscadas = termoSemAcento.split(' ');
-        // =====================================================================
+        for (let i = 0; i < listaItens.length; i++) {
+            const item = listaItens[i];
+            const textoItem = item.textContent.toLowerCase();
+            const textoItemSemAcento = removerAcentos(textoItem);
 
-        // B. Trocamos o "for...of" por um "for" clássico.
-        for (var i = 0; i < listaItens.length; i++) {
+            let ehUmResultadoValido = true;
 
-            var item = listaItens[i];
-
-            // =====================================================================
-            // !! MUDANÇA 3: LIMPANDO O TEXTO DO ITEM DA LISTA !!
-            // =====================================================================
-            var textoItem = item.textContent.toLowerCase();
-            // Também limpamos o texto do item da lista
-            var textoItemSemAcento = removerAcentos(textoItem);
-            // =====================================================================
-
-            var ehUmResultadoValido = true;
-
-            for (var palavra of palavrasBuscadas) {
-                // =====================================================================
-                // !! MUDANÇA 4: COMPARANDO OS TEXTOS LIMPOS !!
-                // =====================================================================
-                // Agora, procuramos a palavra (sem acento) dentro do texto do item (sem acento)
+            // Lógica "E": O item precisa conter TODAS as palavras digitadas
+            for (const palavra of palavrasBuscadas) {
                 if (!textoItemSemAcento.includes(palavra)) {
                     ehUmResultadoValido = false;
                     break;
                 }
-                // =====================================================================
             }
 
             if (ehUmResultadoValido) {
@@ -102,9 +69,7 @@ function configurarBusca(idInput, idLista) {
     });
 }
 
-
-// --- PARTE 4: ATIVANDO AS BUSCAS ---
-// (Esta parte estava correta)
+// --- Inicialização das Buscas ---
 configurarBusca('busca-cultos', 'lista-cultos');
 configurarBusca('busca-ensaio', 'lista-ensaios');
 configurarBusca('busca-serviços', 'lista-serviços');

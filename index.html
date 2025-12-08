@@ -10,16 +10,18 @@
 </head>
 <body>
     <header>
-    <h1>Relatório CCB - Maringá e Região</h1>
-    <img class="logo-fundo" src="logo_oficial_CCB.png" alt="Logo">
+        <h1>Relatório CCB - Maringá e Região</h1>
+        <img class="logo-fundo" src="logo_oficial_CCB.png" alt="Logo">
 
-    <button onclick="mostrarCultos()">Cultos</button>
-    <button onclick="mostrarEnsaios()">Ensaios</button>
-    <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button>
-    <button onclick="mostrarServiços()">Serviços</button>
+        <button onclick="mostrarCultos()">Cultos</button>
+        <button onclick="mostrarEnsaios()">Ensaios</button>
+    <!-- <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button> -->
+        <button onclick="mostrarServiços()">Serviços</button>
+        <a href="musica.html"><button type="button">Área músical</button></a>
     </header>
 
-    <main>
+    <main> 
+        <!--Lista de Cultos -->
         <div id="pagina-cultos" class="conteudo hidden">
             <h2>Agenda de Cultos</h2>
             <input id="busca-cultos" placeholder="Digite o dia ou local...">
@@ -62,6 +64,7 @@
             </ul>
         </div>
 
+        <!--Lista de Ensaios -->
         <div id="pagina-ensaios" class="conteudo hidden">
             <h2>Agenda de Ensaios</h2>
             <input id="busca-ensaio" placeholder="Digite o dia ou local...">
@@ -153,6 +156,7 @@
 
         </div>
 
+        <!--Lista de Serviços -->
         <div id="pagina-serviços" class="conteudo hidden">
             <h2>Lista de Serviços - 07/11/25</h2>
             <input id="busca-serviços" placeholder="Digite o serviço ou data...">
@@ -172,12 +176,27 @@
                 <li>Culto para Mocidade - Floresta - 13/12/25 no Sábado às 19:00h - Ancião Marcos Moreira</li>
                 
 
-                <h3>Ensaios (Música)</h3>
+                <h3>Ensaio Regional (Geral)</h3>
                 <li>Ensaio Regional - Vila Morangueira - 30/11/25 no Domingo às 09:00h - Ancião Clóvis Maciel de Oliveira</li>
                 <li>Ensaio Regional - Jardim Alvorada - 30/11/25 no Domingo às 09:00h - Ancião José Reis</li>
-                <li>Ensaio Geral para Familia de CORDAS - Vila Morangueira - 01/12/25 na Segunda-Feira às 19:30h</li>
-                <li>Ensaio Geral para Familia de MADEIRAS - Sarandi (Central) - 01/12/25 na Segunda-Feira às 19:30h</li>
-                <li>Ensaio Geral para Familia de METAIS - Paiçandu (Central) - 01/12/25 na Segunda-Feira às 19:30h</li>
+
+                <h3>Ensaio p/ Familia (Cordas)</h3>
+                <li>Ensaio Geral para Familia de CORDAS - Vila Morangueira - 01/12/2025 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de CORDAS - Mandaguaçu Central - 02/02/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de CORDAS - Sarandi (Central) - 02/03/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de CORDAS - Paiçandu (Central) - 06/04/2026 na Segunda-Feira às 19:30h</li>
+                  
+                <h3>Ensaio p/ Familia (Madeiras)</h3>
+                <li>Ensaio Geral para Familia de MADEIRAS - Sarandi (Central) - 01/12/2025 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de MADEIRAS - Paiçandu (Central) - 02/02/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de MADEIRAS - Vila Morangueira - 02/03/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de MADEIRAS - Mandaguaçu Central - 06/04/2026 na Segunda-Feira às 19:30h</li>
+                
+                <h3>Ensaio p/ Familia (Metais)</h3>
+                <li>Ensaio Geral para Familia de METAIS - Paiçandu (Central) - 01/12/2025 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de METAIS - Sarandi (Central) - 02/02/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de METAIS - Mandaguaçu Central - 02/03/2026 na Segunda-Feira às 19:30h</li>
+                <li>Ensaio Geral para Familia de METAIS - Vila Morangueira - 06/04/2026 na Segunda-Feira às 19:30h</li>
 
             </ul>
         </div>
