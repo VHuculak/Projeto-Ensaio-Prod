@@ -1,11 +1,11 @@
-# Plataforma de Escalas e Serviços (CCB)
+# Plataforma Unificada de Serviços (CCB)
 
 Uma aplicação web responsiva desenvolvida para unificar e facilitar a consulta de listas de cultos, ensaios e serviços mensais, substituindo o uso de arquivos em PDF.
 
 ## O Projeto
 O objetivo principal deste projeto foi criar um sistema "3 em 1" focado na usabilidade mobile. Anteriormente, as informações circulavam de forma descentralizada (arquivos em PDF ou imagens no WhatsApp). Esta aplicação centraliza os dados, permitindo buscas rápidas e filtros eficientes na palma da mão.
 
-Além das escalas, o projeto conta com uma área musical dedicada, reunindo links de teoria musical e hinos cifrados para auxiliar músicos, organistas e violeiros.
+Além dos serviços, o projeto conta com uma área musical dedicada, reunindo links de teoria musical e hinos cifrados para auxiliar músicos, organistas e violeiros.
 
 ## Funcionalidades
 * Consulta unificada: Listas de cultos, ensaios e serviços no mesmo lugar.
