@@ -21,8 +21,6 @@ Além dos serviços, o projeto conta com uma área musical dedicada, reunindo li
 ## Como acessar
 Você pode acessar a versão final da aplicação rodando diretamente no navegador aqui: 
 https://lista-de-servicos-ccb.vercel.app/
-ou
-https://vhuculak.github.io/Projeto-Ensaio-Prod/
 
 Para rodar localmente, basta clonar este repositório e abrir o arquivo index.html no seu navegador.
 
