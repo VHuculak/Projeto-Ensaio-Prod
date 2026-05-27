@@ -20,13 +20,21 @@
         <!-- <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button> -->
         <button onclick="mostrarServiços()">Serviços</button>
         <a href="musica.html"><button type="button">Área músical</button></a>
+        <a href="#"><button type="button" class="disabled">Santa Ceia</button></a>
     </header>
 
     <main>
         <!--Lista de Cultos -->
         <div id="pagina-cultos" class="conteudo hidden">
             <h2>Agenda de Cultos</h2>
-            <input id="busca-cultos" placeholder="Digite o dia ou local...">
+            <div class="busca-container">
+                <input id="busca-cultos" placeholder="Digite o dia ou local...">
+            </div>
+            <div class="filtragem-rapida">
+                <span class="filtro-por">Filtrar por:</span>
+                <button type="button" class="botao-filtrar" onclick="filtrarHoje()">Hoje</button>
+                <button type="button" class="botao-limpar" onclick="limparFiltro()">Limpar</button>
+            </div>
             <ul id="lista-cultos">
                 <li>Vila Santo Antônio - Terça e Sábado - 19:30 | Domingo - 18:30</li>
                 <li>Jardim Vitória - Terça e Sábado - 19:30 | Domingo - 18:30</li>
@@ -69,7 +77,14 @@
         <!--Lista de Ensaios -->
         <div id="pagina-ensaios" class="conteudo hidden">
             <h2>Agenda de Ensaios</h2>
-            <input id="busca-ensaio" placeholder="Digite o dia ou local...">
+            <div class="busca-container">
+                <input id="busca-ensaio" placeholder="Digite o dia ou local...">
+            </div>
+            <div>
+                <span class="">Filtrar por:</span>
+                <button type="button" class="botao-filtrar" onclick="filtrarHoje()">Hoje</button>
+                <button type="button" class="botao-limpar" onclick="limparFiltro()">Limpar</button>
+            </div>
             <ul id="lista-ensaios">
                 <li>1ª Sexta - Jd. Liberdade</li>
                 <li>1ª Sexta - Marialva - Central</li>
@@ -162,33 +177,28 @@
         <!--Lista de Serviços -->
         <div id="pagina-serviços" class="conteudo hidden">
             <h2>Lista de Serviços</h2>
-            <input id="busca-serviços" placeholder="Digite o serviço ou data...">
+            <div class="busca-container">
+                <input id="busca-serviços" placeholder="Digite o serviço ou data...">
+            </div>
+            <div>
+                <span class="">Filtrar por:</span>
+                <button type="button" class="botao-filtrar" onclick="filtrarHoje()">Hoje</button>
+                <button type="button" class="botao-limpar" onclick="limparFiltro()">Limpar</button>
+            </div>
             <ul id="lista-serviços">
-                <h3>Batismos</h3>
-                <li>Batismo - Iguatemi – Central - 17/05/26 no Domingo às 18:30h - Ir. Clóvis Maciel de Oliveira</li>
+                <h3 class="lista-vazia">Batismos</h3>
 
                 <h3>Reuniões de Mocidade</h3>
                 <li>Reunião de Mocidade "ONLINE" - Transmissão pelo Brás - 31/05/26 no Domingo às 14:00h - Participação Individual</li>
                 <li>Reunião de Mocidade - Paiçandu – Central - 07/06/26 no Domingo às 14:00h - Ir. Elias Rodrigues Fermino</li>
 
                 <h3>Culto para Mocidade</h3>
-                <li>Culto para Mocidade - Itambé - 09/05/26 no Sábado às 19:00h - Ir. Marcos Moreira</li>
-                <li>Culto para Mocidade - São Jorge do Ivaí Central - 23/05/26 no Sábado às 19:00h - Ir. Izaias Valério</li>
                 <li>Culto para Mocidade - Vila Santa Izabel - 30/05/26 no Sábado às 19:00h - Ir. Márcio Valério</li>
                 <li>Culto para Mocidade - Vila Morangueira - 30/05/26 no Sábado às 19:00h - Ir. Laerte Tolentino</li>
 
-                <h3>Teste e Exame de Música</h3>
-                <li>Testes e Exames para Músicos e Organistas (MSA/Teoria) - 1º PERÍODO - Sede Administrativa
-                    (Salas: 5º e 6º andar)<br> - 09/05/26 no Sábado às 09:00h - Irs. José Antônio dos Reis / Clóvis
-                    Maciel de Oliveira</li>
-                <li>Testes e Exames para Músicos e Organistas (INSTRUMENTO, MÉTODO E HINÁRIO) - 2º PERÍODOS - Sede
-                    Administrativa <br>(Salas: 3º, 5º e 6º andar) - 16/05/26 no Sábado às 09:00h - Irs. José Antônio dos
-                    Reis / Clóvis Maciel de Oliveira</li>
+                <!--<h3 class="lista-vazia">Teste e Exame de Música</h3> -->
 
-                <h3>Ensaio Regional (Geral)</h3>
-                <li>Ensaio Regional - Vila Morangueira - 24/05/26 no Domingo às 09:00h - Ir. José Antônio dos Reis</li>
-                <li>Ensaio Regional - Jardim Alvorada - 24/05/26 no Domingo às 09:00h - Ir. Clóvis Maciel de Oliveira
-                </li>
+                <h3 class="lista-vazia">Ensaio Regional (Geral)</h3>
 
 
                 <!-- <h3 class="lista-vazia">Ensaio p/ Familia (Cordas)</h3>
