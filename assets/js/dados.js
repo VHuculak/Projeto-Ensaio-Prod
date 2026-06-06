@@ -254,7 +254,7 @@ const dadosCongregacoes = [
     {
         id: "culto-jardim-ouro-cola",
         nome: "Jardim Ouro Cola",
-        endereco: "Avenida Virgílio Manília, 22104 - Maringá - PR - 87070-170",
+        endereco: "Avenida Virgílio Manília, 2042 - Maringá - PR - 87070-170",
         anciao: "João Marinho",
         cooperador: "José Silva dos Santos",
         diacono: "",
