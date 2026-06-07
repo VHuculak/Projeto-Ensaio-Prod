@@ -415,7 +415,7 @@ const dadosCongregacoes = [
     },
     {
         id: "culto-sdi-jd-panorama",
-        nome: "Sarandi Jardim Paronorama",
+        nome: "Sarandi Jardim Panorama",
         endereco: "R. Carlos Gomes, 543 - Jardim Panorama, Sarandi - PR, 87113-100",
         anciao: "",
         cooperador: "José Gabriel Neto",
