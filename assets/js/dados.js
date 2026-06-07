@@ -362,7 +362,7 @@ const dadosCongregacoes = [
     {
         id: "culto-sdi-jd-das-torres",
         nome: "Sarandi Jardim das Torres",
-        endereco: "Rua Nossa Sra. Aparecida, 1999 - Jardim das Torres, Sarandi - PR",
+        endereco: "R. Nossa Sra. Aparecida, 1999 - Jardim das Torres, Sarandi - PR",
         anciao: "",
         cooperador: "Adair Theodoro da Silva",
         diacono: "Adão Mariano da Silva",
@@ -414,7 +414,7 @@ const dadosCongregacoes = [
         jovens: "Lindomar Machado"
     },
     {
-        id: "culto-sdi-jd-paronorama",
+        id: "culto-sdi-jd-panorama",
         nome: "Sarandi Jardim Paronorama",
         endereco: "R. Carlos Gomes, 543 - Jardim Panorama, Sarandi - PR, 87113-100",
         anciao: "",
@@ -434,7 +434,7 @@ const dadosCongregacoes = [
     {
         id: "culto-sdi-resid-sao-jose",
         nome: "Sarandi Residencial São José",
-        endereco: "",
+        endereco: "Avenida Anchieta, 1231 - sarandi - PR, 87114-595",
         anciao: "",
         cooperador: "Argemiro Nunes",
         diacono: "",
