@@ -120,7 +120,7 @@ const dadosCongregacoes = [
         id: "culto-vila-santa-izabel",
         nome: "Vila Santa Izabel",
         endereco: "Rua João de Matos Alberto, 148 - Vila Santa Izabel, Maringá - PR - 87080-460",
-        anciao: "Melchior José Alves",
+        anciao: "Melchior José Alves\nJoão Marinho",
         cooperador: "Lavio de Oliveira Tolentino",
         diacono: "João de Oliveira Rodrigues\nValtoir da Silva Fernandes",
         jovens: "Alair Jovino de Carvalho"
@@ -286,5 +286,159 @@ const dadosCongregacoes = [
         cooperador: "Eduardo Cesar de Gouvea",
         diacono: "",
         jovens: "Ailton de Souza Silva"
-    }
+    },
+    {
+        id: "culto-pdu-central",
+        nome: "Paiçandu Central",
+        endereco: "Rua Carlos Roberto Seghezzi, 195 - Paiçandu - PR - 87140-000",
+        anciao: "",
+        cooperador: "José Todon\nElionidas Noronha",
+        diacono: "Eliel Bruschi",
+        jovens: "Lincon Garcia Luiz"
+    },
+    {
+        id: "culto-pdu-agua-boa",
+        nome: "Água Boa",
+        endereco: "Rua São Jorge, 243 - Água Boa, Paiçandu - PR, 87140-000",
+        anciao: "",
+        cooperador: "Paulo Andreassa",
+        diacono: "Sergio Aparecido Possani",
+        jovens: "Vilson Marcos de Oliveira"
+    },
+    {
+        id: "culto-pdu-jardim-bela-vista",
+        nome: "Paiçandu Jardim Bela Vista",
+        endereco: "Rua Sebastião Antonio Neto, 116 - Paiçandu - PR - 87140-000",
+        anciao: "Hildebrando Gomes",
+        cooperador: "Edgar Rodrigues de Lima",
+        diacono: "Assunção da Silva",
+        jovens: "Matheus Henrique Amaral Massarenti"
+    },
+    {
+       id: "culto-pdu-jardim-monte-carmelo",
+       nome: "Paiçandu Jardim Monte Carmelo",
+       endereco: "Rua Alameda Canafistula, 110 - Paiçandu - PR - 87140-000",
+       anciao: "",
+       cooperador: "Antônio Marcos da Silva",
+       diacono: "Pedro Antônio Belmonte",
+       jovens: "Anderson Alves de Souza"
+    },
+    {
+        id: "culto-pdu-jardim-pioneiro",
+        nome: "Paiçandu Jardim Pioneiro",
+        endereco: "Rua Arthur Zirondi, 172 - Paiçandu - PR - 87140-000",
+        anciao: "Marcos Moreira",
+        cooperador: "Patterson José Cruz",
+        diacono: "José Pedro da Rocha",
+        jovens: "Edwilson Pereira"
+    },
+    {
+        id: "culto-sdi-central",
+        nome: "Sarandi Central",
+        endereco: "Rua Taí, 900 - Centro, Sarandi - PR, 87111-130",
+        anciao: "Eliseu Leles\nAdriano de Souza",
+        cooperador:"Elias Alves de Lima",
+        diacono: "Nivaldo Aparecido Malagutti\nManoel Ernesto Amieiro Junior",
+        jovens: "Adilson Alves de Moraes Junior"
+    },
+    {
+        id: "culto-sdi-conj-residencial-floresta",
+        nome: "Sarandi Conjunto Residencial Floresta",
+        endereco: "Av. João-de-barro, 1078 - Jardim Triangulo, Sarandi - PR, 87112-690",
+        anciao: "Carlos Eduardo da Silva Gomes",
+        cooperador: "Guilherme Ribeiro dos Passos",
+        diacono: "",
+        jovens: "Jean Mendes Silveira"
+    },
+    {
+        id: "culto-sdi-conj-vale-azul",
+        nome: "Sarandi Conjunto Vale Azul",
+        endereco: "Sarandi - PR, 87115-035",
+        anciao: "",
+        cooperador: "Wilson Fagundes",
+        diacono: "",
+        jovens: "Tiago Francisco Amorim"
+    },
+    {
+        id: "culto-sdi-jd-das-torres",
+        nome: "Sarandi Jardim das Torres",
+        endereco: "Rua Nossa Sra. Aparecida, 1999 - Jardim das Torres, Sarandi - PR",
+        anciao: "",
+        cooperador: "Adair Theodoro da Silva",
+        diacono: "Adão Mariano da Silva",
+        jovens: "Edemilson de Souza Correia",
+    },
+    {
+        id: "culto-sdi-jd-esperanca-2",
+        nome: "Sarandi Jardim Esperança - 2ª Parte",
+        endereco: "R. Navirai, 1577 - Jardim Gralha Azul, Sarandi - PR, 87112-048",
+        anciao: "",
+        cooperador: "Jose Rodrigues de Oliveira",
+        diacono: "Liu Eber Botelho Martins",
+        jovens: "Edivaldo José Deuslirio",
+    },
+    {
+        id: "culto-sdi-jd-independencia-3",
+        nome: "Sarandi Jardim Independência - 3ª Parte",
+        endereco: "R. Dom João VI, 435 - Jardim Panorama, Sarandi - PR, 87113-050",
+        anciao: "",
+        cooperador: "Genesio José de Oliveira Neto",
+        diacono: "Cevero Estevão da Costa",
+        jovens: "Fernandes Carneloz"
+    },
+    {
+        id: "culto-sdi-jd-nova-alianca",
+        nome: "Sarandi Jardim Nova Aliança",
+        endereco: "Rua Martim Afonso, 275 - Parque Res. Nova Alianca, Sarandi - PR, 87111-710",
+        anciao: "",
+        cooperador: "Kelvin Martimiano Pereira",
+        diacono: "",
+        jovens: "Sandro Izidoro Basan"
+    },
+    {
+        id: "culto-sdi-jd-nova-independencia",
+        nome: "Sarandi Jardim Nova Independência",
+        endereco: "R. Ignácio Pelchibeski, 789 - Jardim Nova Independencia I, Sarandi - PR, 87114-665",
+        anciao: "",
+        cooperador: "Alicio Barbosa da Silva",
+        diacono: "Adhemar Marques de Jesus",
+        jovens: "Devanir Mendes Pereira"
+    },
+    {
+        id: "culto-sdi-jd-ouro-verde-ii",
+        nome: "Sarandi Jardim Ouro Verde - II",
+        endereco: "Av. Atlântica, 1111 - Jardim Ouro Verde II, Sarandi - PR, 87114-170",
+        anciao: "",
+        cooperador: "Geraldo Alves Pereira",
+        diacono: "Estevam Sales da Costa",
+        jovens: "Lindomar Machado"
+    },
+    {
+        id: "culto-sdi-jd-paronorama",
+        nome: "Sarandi Jardim Paronorama",
+        endereco: "R. Carlos Gomes, 543 - Jardim Panorama, Sarandi - PR, 87113-100",
+        anciao: "",
+        cooperador: "José Gabriel Neto",
+        diacono: "Gonçalo Carlos da Silva",
+        jovens: "Jean Michael Dias"
+    },
+    {
+        id: "culto-sdi-pq-alvamar",
+        nome: "Sarandi Parque Alvamar",
+        endereco: "Rua Conceição Aparecida de Magalhães, 442 - Parque Alvamar II, Sarandi - PR, 87113-520",
+        anciao: "Elias Rodrigues Fermino",
+        cooperador: "Rubens Clemente Pereira",
+        diacono: "Ozair Soares\nAntônio Carlos Aparecido Faustino",
+        jovens: "Lucas Rodrigues Faustino"
+    },
+    {
+        id: "culto-sdi-resid-sao-jose",
+        nome: "Sarandi Residencial São José",
+        endereco: "",
+        anciao: "",
+        cooperador: "Argemiro Nunes",
+        diacono: "",
+        jovens: "Moacir Antônio da Silva"
+    },
+
 ];
