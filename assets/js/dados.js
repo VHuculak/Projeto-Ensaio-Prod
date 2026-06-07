@@ -434,7 +434,7 @@ const dadosCongregacoes = [
     {
         id: "culto-sdi-resid-sao-jose",
         nome: "Sarandi Residencial São José",
-        endereco: "Avenida Anchieta, 1231 - sarandi - PR, 87114-595",
+        endereco: "Av. Anchieta, 1525 - Res. Sao Jose, Sarandi - PR, 87114-595",
         anciao: "",
         cooperador: "Argemiro Nunes",
         diacono: "",
