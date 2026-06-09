@@ -36,8 +36,8 @@ const dadosCongregacoes = [
         jovens: "Edmilson João da Silva"
     },
     {
-        id: "culto-aeroporto-3",
-        nome: "Parque Residencial Aeroporto - 3ª Parte",
+        id: "culto-jardim-bertioga",
+        nome: "Jardim Bertioga",
         endereco: "Rua José Peralta Pardial, 181 - Jardim Bertioga, Maringá - PR - 87055-180",
         anciao: "Izaías Valério",
         cooperador: "Elias Da Silva Felipe",
