@@ -440,5 +440,229 @@ const dadosCongregacoes = [
         diacono: "",
         jovens: "Moacir Antônio da Silva"
     },
+    // --- MANDAGUAÇU (MÇU) ---
+    // Verificar localizações das congregações abaixo 
+    {
+        id: "culto-mcu-central",
+        nome: "Mandaguaçu - Central (Vila Carnelós)",
+        endereco: "Rua do Rosário, 43 - Mandaguaçu - PR - 87160-000",
+        anciao: "Helizeu Diniz",
+        cooperador: "Izaias Meneses de Oliveira",
+        diacono: "Pedro Franzão\nAbraão Pereira da Silva",
+        jovens: "Kleber Da Silva Correa"
+    },
+    {
+        id: "culto-mcu-pulinopolis",
+        nome: "Pulinópolis",
+        endereco: "R. Copacabana, 62, Mandaguaçu - PR, 87160-000",
+        anciao: "",
+        cooperador: "Aparecido Angelo Bortoto",
+        diacono: "",
+        jovens: "Juarez Francisco de Carvalho"
+    },
+    {
+        id: "culto-mcu-vila-guadiana",
+        nome: "Vila Guadiana",
+        endereco: "Rua Bandeirantes, 176 - Mandaguaçu - PR - 87160-000",
+        anciao: "",
+        cooperador: "Joaquim Oscar de Souza",
+        diacono: "Arnaldo Francisco do Nascimento",
+        jovens: ""
+    },
+    {
+        id: "culto-mcu-jd-sao-rafael",
+        nome: "Jardim São Rafael",
+        endereco: "Rua Marcio Rafael, 569 - Mandaguaçu - PR - 87160-000",
+        anciao: "",
+        cooperador: "Paulo Alves Teixeira",
+        diacono: "",
+        jovens: "Elias Pereira dos Santos"
+    },
+    {
+        id: "culto-mcu-jardim-europa",
+        nome: "Jardim Europa",
+        endereco: "Rua Adalto Gonçalves da Cruz, 228, Mandaguaçu - PR, 87160-000",
+        anciao: "",
+        cooperador: "Valmir Rozin",
+        diacono: "",
+        jovens: ""
+    },
+
+    // --- MARIALVA (MVA) ---
+    {
+        id: "culto-marialva-central",
+        nome: "Marialva - Central",
+        endereco: "Avenida Rui Barbosa, 772 - Marialva - PR - 86990-000",
+        anciao: "Osvaldo Donato",
+        cooperador: "Wilson Rosa de Souza",
+        diacono: "Renato Bergamo\nSergio Fernandes Botelho\nNeomar de Oliveira José",
+        jovens: "Deiverson Gabriel de Souza Nascimento"
+    },
+    {
+        id: "culto-mva-conj-joao-de-barros",
+        nome: "Conjunto João de Barro",
+        endereco: "Rua dos Sabiás, 2186 - Marialva - PR - 86990-000",
+        anciao: "",
+        cooperador: "Flávio Marcelo da Silva",
+        diacono: "",
+        jovens: "Antônio Edivaldo da Silva"
+    },
+    {
+        id: "culto-mva-sao-miguel-do-cambui",
+        nome: "São Miguel do Cambuí",
+        endereco: "Rua Ipatinga, s/n - Marialva - PR - 86996-000",
+        anciao: "",
+        cooperador: "Ezequiel Ribeiro dos Santos",
+        diacono: "",
+        jovens: ""
+    },
+    {
+        id: "culto-mva-aquidaban",
+        nome: "Aquidaban",
+        endereco: "Avenida Marialva, 346 - Marialva - PR - 86995-000",
+        anciao: "",
+        cooperador: "Aparecido Alfredo Brambila\nValdecir Salvagnini",
+        diacono: "",
+        jovens: ""
+    },
+    {
+        id: "culto-mva-conj-giacomo-colombari",
+        nome: "Conjunto Giácomo Colombare",
+        endereco: "Rua João Machioli, 5 - Marialva - PR - 86990-000",
+        anciao: "",
+        cooperador: "João Medeiros de Miranda",
+        diacono: "",
+        jovens: "Marcio Alexandro de Souza"
+    },
+    {
+        id: "culto-mva-santa-fe",
+        nome: "Santa Fé",
+        endereco: "Rua Santo Volpato, s/n - Marialva - PR - 86994-000",
+        anciao: "",
+        cooperador: "Paulo Jose dos Santos",
+        diacono: "",
+        jovens: "Juvelino Aires da Silva"
+    },
+    {
+        id: "culto-mva-sao-luiz",
+        nome: "São Luiz",
+        endereco: "Rua São José, 1276 - Marialva - PR - 86998-000",
+        anciao: "",
+        cooperador: "João Antunes Soares",
+        diacono: "",
+        jovens: ""
+    },
+
+    // --- JAGUAPITÃ E REGIÃO (JTÃ) ---
+    {
+        id: "culto-jaguapita-central",
+        nome: "Jaguapitã - Central",
+        endereco: "Rua Plácido de Castro, 145 - Jaguapitã - PR - 86610-000",
+        anciao: "",
+        cooperador: "Levi Siqueira dos Santos",
+        diacono: "",
+        jovens: "Ademir Rodrigues Martins"
+    },
+    {
+        id: "culto-jta-cafeara",
+        nome: "Cafeara",
+        endereco: "Rua Anízio Luz, 366 - Cafeara - PR - 86640-000",
+        anciao: "",
+        cooperador: "Pedro Guimarães",
+        diacono: "",
+        jovens: "Valdemir Jose de Carvalho"
+    },
+    {
+        id: "culto-jta-miraselva",
+        nome: "Miraselva",
+        endereco: "Rua Paraná, 61 - Miraselva - PR - 86615-000",
+        anciao: "Zoel José de Santana",
+        cooperador: "Saulo Câmara",
+        diacono: "",
+        jovens: "Thiago Mondini Matias"
+    },
+    {
+        id: "culto-jta-guaraci",
+        nome: "Guaraci",
+        endereco: "Rua Prefeito Djalma Giuli, 315 - Guaraci - PR - 86620-000",
+        anciao: "",
+        cooperador: "Anderson Vieira da Silva",
+        diacono: "Edson Bonfim",
+        jovens: "Vivaldo Alves dos Santos"
+    },
+    {
+        id: "culto-jta-prado-ferreira",
+        nome: "Prado Ferreira",
+        endereco: "R. Brasil, 121, Prado Ferreira - PR, 86618-000",
+        anciao: "Orlando Archila Gonzales\nGhiaroni Procopio do Monte",
+        cooperador: "Eduvaldo Soares dos Santos",
+        diacono: "Edivaldo Azarias",
+        jovens: "Adenilson Rodrigues de Lima"
+    },
+    {
+        id: "culto-jta-bentopolis",
+        nome: "Bentópolis",
+        endereco: "Rua Pará, 35 - Guaraci - PR - 86625-000",
+        anciao: "",
+        cooperador: "Edvaldo Maia do Nascimento",
+        diacono: "",
+        jovens: "Leandro Alves Tomaz"
+    },
+
+    // --- OUTRAS CIDADES ---
+    {
+        id: "culto-dr-camargo-central",
+        nome: "Doutor Camargo - Central",
+        endereco: "Rua Santos Dumont, 111 - Doutor Camargo - PR - 87155-000",
+        anciao: "Donizete Aparecido do Prado",
+        cooperador: "Adalto de Almeida Barbosa",
+        diacono: "Sidnei de Oliveira Santos\nJosé Carlos de Souza",
+        jovens: "Moisés de Oliveira"
+    },
+    {
+        id: "culto-floresta-central",
+        nome: "Floresta - Central",
+        endereco: "Avenida Floresta, 175 - Floresta - PR - 87120-000",
+        anciao: "",
+        cooperador: "Aparecido Donizete Alves",
+        diacono: "Valdinei Salvador Ferreira",
+        jovens: "Dhyego Augusto de Oliveira"
+    },
+    {
+        id: "culto-ourizona-central",
+        nome: "Ourizona - Central",
+        endereco: "Rua Sorocaba, 21 - Ourizona - PR - 87170-000",
+        anciao: "",
+        cooperador: "Valdenir Aparecido Garcia\nCicero Francisco da Silva",
+        diacono: "Ismael de Oliveira Melo",
+        jovens: "Edson Luiz da Silva"
+    },
+    {
+        id: "culto-sao-jorge-do-ivai-central",
+        nome: "São Jorge do Ivaí - Central",
+        endereco: "Praça Arlíndo Ramos de Amorim, 436 - Jardim Sao Joaquim, São Jorge do Ivaí - PR, 87190-000",
+        anciao: "",
+        cooperador: "Agnado de Paula",
+        diacono: "Ademir Aparecido de Souza",
+        jovens: "Cesar Candido Mesquita"
+    },
+    {
+        id: "culto-ivatuba-central",
+        nome: "Ivatuba - Central",
+        endereco: "Avenida Getúlio Vargas, 61 - Ivatuba - PR - 87130-000",
+        anciao: "",
+        cooperador: "Valdomiro de Souza",
+        diacono: "",
+        jovens: "Jean Carlos Alves Pinheiro"
+    },
+    {
+        id: "culto-itambe-central",
+        nome: "Itambé - Central",
+        endereco: "Rua Piauí, 175 - Itambé - PR - 87175-000",
+        anciao: "Antonio Carlos da Silva",
+        cooperador: "Luiz Antonio de Souza\nOdair de Oliveira Santos",
+        diacono: "Claudinei Antonio Alves",
+        jovens: "Cleverson Candido Mesquita"
+    },
 
 ];
