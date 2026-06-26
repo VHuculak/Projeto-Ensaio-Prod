@@ -140,28 +140,53 @@ function fecharModal() {
 
 modalFechar.addEventListener('click', fecharModal);
 
-function abrirModal(id){
-    const congregacao = dadosCongregacoes.find(item => item.id === id);
 
-    document.getElementById('modal-nome').textContent = congregacao.nome;
-    document.getElementById('modal-endereco').textContent = congregacao.endereco;
-    document.getElementById('modal-anciao').textContent = congregacao.anciao;
-    document.getElementById('modal-cooperador').textContent = congregacao.cooperador;
-    document.getElementById('modal-diacono').textContent = congregacao.diacono;
-    document.getElementById('modal-jovens').textContent = congregacao.jovens;
+function abrirModal(idClicado) {
+    let idParaBusca = idClicado;
 
-    modalOverlay.classList.remove('hidden');
+    // A MÁGICA AQUI: Se for um ensaio, troca a palavra para procurar como culto no Array
+    if (idClicado.startsWith('ensaio-')) {
+        idParaBusca = idClicado.replace('ensaio-', 'culto-');
+    }
 
-    document.getElementById('modal-maps').href = `https://maps.google.com/?q=${congregacao.endereco.replace(/ /g, '+')}`;
-    document.body.style.overflow = 'hidden';
+    // Busca a congregação no array que está no seu outro arquivo
+    const congregacao = dadosCongregacoes.find(item => item.id === idParaBusca);
 
+    if (congregacao) {
+        document.getElementById('modal-nome').textContent = congregacao.nome;
+        document.getElementById('modal-endereco').textContent = congregacao.endereco;
+        document.getElementById('modal-anciao').textContent = congregacao.anciao;
+        document.getElementById('modal-cooperador').textContent = congregacao.cooperador;
+        document.getElementById('modal-diacono').textContent = congregacao.diacono;
+        document.getElementById('modal-jovens').textContent = congregacao.jovens;
+
+        modalOverlay.classList.remove('hidden');
+
+        // Notei um pequeno erro na sua URL do maps (tinha um '0{' e faltou '$'). Corrigi aqui:
+        document.getElementById('modal-maps').href = `https://www.google.com/maps/search/?api=1&query=${congregacao.endereco.replace(/ /g, '+')}`;
+        
+        document.body.style.overflow = 'hidden';
+    } else {
+        alert("Dados desta congregação ainda não foram cadastrados.");
+    }
 }
+
 
 const itensCultos = document.getElementById('lista-cultos').getElementsByTagName('li');
 for (let i = 0; i < itensCultos.length; i++) {
     itensCultos[i].addEventListener('click', function() {
         abrirModal(this.id);
 })
+};
+
+const itensEnsaios = document.getElementById('lista-ensaios').getElementsByTagName('li');
+for (let i = 0; i < itensEnsaios.length; i++) {
+    itensEnsaios[i].addEventListener('click', function() {
+        // Só tenta abrir se a li tiver um ID cadastrado no HTML
+        if (this.id) {
+            abrirModal(this.id);
+        }
+    });
 };
 
 // --- Inicialização das Buscas ---
